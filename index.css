@@ -1,0 +1,310 @@
+@charset "UTF-8";
+/* GENERAL */
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap");
+/* Eléments principaux de la page */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "DM Sans", Arial, sans-serif;
+  font-weight: 400;
+}
+
+.content h1 {
+  text-align: right;
+  font-weight: 300;
+  font-size: 1.6em;
+  color: #901C1C;
+  margin-right: 10%;
+  margin-top: -3.1%;
+  margin-bottom: 4%;
+}
+.content__photographer__profile a {
+  text-decoration: none;
+}
+.content__photographer__profile h2 {
+  font-weight: 300;
+  font-size: 2.3em;
+  color: #D3573C;
+  margin-top: 3%;
+}
+.content__photographer__profile h3 {
+  font-weight: 300;
+  font-size: 0.85em;
+  margin: 1%;
+  color: #901C1C;
+}
+.content__photographer__profile p {
+  font-size: 0.8em;
+  font-weight: 500;
+}
+.content__photographer__profile h4 {
+  font-weight: 300;
+  font-size: 0.7em;
+  margin: 1%;
+}
+
+.content-photographer h2 {
+  font-size: 2.6em;
+  font-weight: 300;
+  color: #D3573C;
+}
+.content-photographer h3 {
+  font-weight: 300;
+  font-size: 1.2em;
+  color: #901C1C;
+  margin: 4% 0%;
+}
+.content-photographer p {
+  font-size: 0.8em;
+  margin: 4% 0%;
+}
+.content-photographer h4 {
+  font-size: 0.9em;
+}
+.content-photographer h5 {
+  font-size: 1.1em;
+  font-weight: 300;
+  color: #901C1C;
+}
+
+.modal-contact__content h1 {
+  font-weight: 300;
+  font-size: 2.3em;
+  margin-top: 1%;
+}
+.modal-contact__content h2 {
+  font-weight: 300;
+  font-size: 2.3em;
+  margin-bottom: 4%;
+  color: #000000;
+}
+
+/* HOME PAGE */
+.header {
+  width: 75%;
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 40px;
+}
+.header__help-nav {
+  position: fixed;
+  z-index: 1;
+  top: 0px;
+  left: 45%;
+  text-decoration: none;
+  padding: 3px 14px;
+  border-radius: 5px;
+  color: black;
+  font-weight: 700;
+  font-size: 0.8em;
+  background-color: #D3573C;
+}
+.header__logo {
+  margin-left: 10px;
+}
+.header__navigation {
+  margin-top: 14px;
+}
+.header__navigation ul {
+  display: flex;
+  column-gap: 8px;
+  list-style-type: none;
+}
+.header__navigation a {
+  border-radius: 20px;
+  border: #C4C4C4 0.5px solid;
+  text-decoration: none;
+  color: #901C1C;
+  font-weight: 700;
+  padding: 5px 10px;
+  box-sizing: border-box;
+  font-size: 0.7em;
+}
+.header__navigation a:hover {
+  background-color: #901C1C;
+  color: #ffffff;
+}
+.header__navigation .sr-only {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.header-photographer {
+  margin-left: 4.5%;
+  margin-top: 2%;
+  margin-bottom: 3.5%;
+}
+.header-photographer svg {
+  transform: scale(1.3);
+}
+.header-photographer .modal-contact {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background-color: rgba(196, 196, 196, 0.4);
+}
+.header-photographer .modal-contact__content {
+  margin: 5% auto;
+  width: 100%;
+  max-width: 450px;
+  animation-name: modalopen;
+  animation-duration: 300;
+  background: #D3573C;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+  color: #000000;
+}
+.header-photographer .modal-contact__content__body {
+  padding: 1% 3% 4% 3%;
+}
+.header-photographer .modal-contact__content__close {
+  position: absolute;
+  right: 15px;
+  top: 16px;
+  width: 32px;
+  height: 32px;
+  opacity: 1;
+  cursor: pointer;
+  transform: scale(0.9);
+}
+.header-photographer .modal-contact__content__close::before, .header-photographer .modal-contact__content__close::after {
+  position: absolute;
+  left: 15px;
+  content: " ";
+  height: 33px;
+  width: 3px;
+  background-color: #fff;
+}
+.header-photographer .modal-contact__content__close::before {
+  transform: rotate(45deg);
+}
+.header-photographer .modal-contact__content__close::after {
+  transform: rotate(-45deg);
+}
+.header-photographer .formData label {
+  font-size: 1.3em;
+  font-weight: 300;
+}
+.header-photographer .formData input {
+  border: 0.8px solid rgba(196, 196, 196, 0.4);
+  border-radius: 5px;
+  outline: none;
+  margin-bottom: 2%;
+}
+.header-photographer .formData input:hover {
+  border: 0.8px solid #901C1C;
+}
+.header-photographer #message {
+  height: 180px;
+  outline: none;
+  border: none;
+}
+.header-photographer .text-control {
+  margin: 0;
+  padding: 8px;
+  width: 100%;
+  border-radius: 5px;
+  font-size: 1.1em;
+  height: 48px;
+}
+.header-photographer .btn-submit {
+  border-radius: 5px;
+  text-decoration: none;
+  background-color: #901C1C;
+  color: #ffffff;
+  font-weight: 500;
+  padding: 16px 14px;
+  font-size: 0.8em;
+  margin-top: 2%;
+  border: none;
+  padding: 12px 24px;
+}
+
+/* PHONE*/
+/* PHOTOGRAPHERS */
+.content__photographer {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 60px;
+  margin-top: 6%;
+  margin-bottom: 6%;
+}
+.content__photographer__profile {
+  flex: 33%;
+  text-align: center;
+}
+.content__photographer__profile img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  object-position: top;
+  clip-path: ellipse(50% 50%);
+}
+.content__photographer__profile__tag ul {
+  display: flex;
+  column-gap: 5px;
+  justify-content: center;
+  list-style-type: none;
+  margin-top: 3%;
+}
+.content__photographer__profile__tag ul a {
+  border-radius: 20px;
+  border: #C4C4C4 0.5px solid;
+  text-decoration: none;
+  color: #901C1C;
+  font-weight: 700;
+  padding: 5px 10px;
+  box-sizing: border-box;
+  font-size: 0.7em;
+}
+.content__photographer__profile__tag ul a:hover {
+  background-color: #901C1C;
+  color: #ffffff;
+}
+.content__photographer__profile__tag ul .sr-only {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+.content__photographer__contact {
+  margin-left: -40%;
+  margin-top: 1%;
+}
+.content__photographer__contact a {
+  border-radius: 5px;
+  text-decoration: none;
+  background-color: #901C1C;
+  color: #ffffff;
+  font-weight: 500;
+  padding: 16px 14px;
+  font-size: 0.8em;
+}
+.content__photographer__photo img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  clip-path: ellipse(50% 50%);
+}
+
+/*# sourceMappingURL=index.css.map */
