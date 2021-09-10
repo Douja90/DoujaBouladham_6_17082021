@@ -1,0 +1,147 @@
+@media (max-width: 734px){
+    .content {
+        h1 {
+                margin-top: -25.5%;
+                margin-bottom: 37%;
+        }
+        &__photographer__profile {
+            a {
+                text-decoration: none;
+            }
+            h2 {
+                    font-size: 1.8em;
+                }
+        }
+    }
+    .content__header{
+        h1{
+            margin-top: -38%;
+           margin-right: 2%;
+            padding-right: 0%;
+            font-size: 1.4em;
+        }
+    }
+    
+    .content-photographer {
+        &__profile {
+                flex: 100%;
+            }  
+        h2 {
+                font-size: 1.6em;
+            }       
+    }
+    
+    .modal-contact__content {
+        h1 {
+                font-size: 1.8em;
+                margin-top: 3%;
+            }
+        
+        h2 {
+           
+                font-size: 1.8em;
+            }
+    }
+// Header home page 
+
+.header {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        width: 100%;
+    
+    &__help-nav {
+            @include sr-only
+    }
+    &__logo {
+        transform: scale(0.6);
+        margin-left: -18%;
+    }
+    &__navigation {
+        margin-top: 14px;
+        ul {
+            
+                flex-wrap: wrap;
+                justify-content: center;
+                row-gap: 10px;
+                padding: 0px 30px;
+            }
+        
+    }
+}
+
+.header-photographer {
+        margin-left: 17%; 
+}
+
+.modal-contact {
+    &__content {
+            margin: 0% auto;
+            height: 100%;
+        
+        &__body {
+            padding: 5% 3% 10% 3%;
+        }
+        
+        &__close {
+            top: 30px;
+        }
+    } 
+}
+
+.formData {
+    label {
+        font-size: 1.3em;
+        font-weight: 300;
+    }
+    input {
+            margin-bottom: 5%;
+    }
+}
+.btn-submit {
+  
+        padding: 8px 50px;
+        margin: 8% 28%;
+}
+
+.content-photographer{
+    &__header {
+       
+        &__profile {
+                margin-left: 0%;
+                margin-bottom: 5%;
+        }
+        &__contact {
+            a {
+                    left: 32%;
+                    left: 30%;
+            }
+        }
+        &__photo {
+            img {
+                    width: 100px;
+                    height: 100px;
+                }
+        }
+    }
+    &__like {
+            @include sr-only
+    }
+    &__work {
+                @include sr-only
+            }
+     &__photography {
+            &__content {
+                flex: 100%;
+                img {
+                    
+                        height: 300px;
+                        object-position: top;
+                }
+               
+            }
+        }
+    
+}
+
+}
