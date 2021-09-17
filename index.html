@@ -12,8 +12,8 @@
   </head>
   <body>
     <div id="bloc-page">
-      <header class="header" role="banner">
-          <a role="link" aria-hidden="true" aria-label="Aide à la navigation" href="#photographer" class="header__help-nav">Passer au contenu</a>
+      <header class="header" role="banner" id="header-banner">
+          <a id="link-content" role="link" aria-hidden="true" aria-label="Aide à la navigation" href="#photographer" class="header__help-nav">Passer au contenu</a>
           <a role="link" alt="FishEye Home page" aria-label="FishEye page d'accueil" href="index.html" class="header__logo">
               <svg role="img" alt="Logo de FishEye" xmlns="http://www.w3.org/2000/svg" width="200" height="50" viewBox="0 0 200 50" fill="none" aria-describedby="title-logo description-logo">
                   <title id="title-logo">FishEye</title>
@@ -67,11 +67,11 @@
       <main class="content" id="photographer">
           <section class="content__header">
               <h1>Nos photographes</h1>
-          </section>
+          <!-- </section>
           <section class="content__photographer">
               <div class="content__photographer__profile" aria-label="Informations du profil de la photographe Mimi Keel">
-                  <a role="link" aria-label="Lien vers le profil de Mimi Keel" href="./photographer-page.html">
-                      <img src="./images/MimiKeel.jpg" title="Portrait Mimi Keel" alt="" />
+                  <a role="link" aria-label="Lien vers le profil de Mimi Keel" href="photographer-page.html">
+                      <img src="./images/Photos/Mimi/Portrait_Nora.jpg" title="Portrait Mimi Keel" alt="" />
                       <h2 aria-label="Nom de la photographe">Mimi Keel</h2>
                   </a>
                   <h3 aria-label="Lieu d'excercie de la photographe">London, Uk</h3>
@@ -100,7 +100,7 @@
               </div>
               <div class="content__photographer__profile" aria-label="Informations du profil de la photographe Ellie-Rose Wilkens">
                   <a role="link" aria-label="Lien vers le profil de Ellie-Rose Wilkens" href="#">
-                      <img src="./images/EllieRoseWilkens.jpg" title="Architecture Horseshoe" alt="" />
+                      <img src="./images/Photos/Ellie Rose/Architecture_Horseshoe.jpg" title="Architecture Horseshoe" alt="" />
                       <h2 aria-label="Nom de la photographe">Ellie-Rose Wilkens</h2>
                   </a>
                   <h3 aria-label="Lieu d'excercie de la photographe">Paris, France</h3>
@@ -121,7 +121,7 @@
               </div>
               <div class="content__photographer__profile" aria-label="Informations du profil de la photographe Tracy Galindo">
                   <a role="link" aria-label="Lien vers le profil de Tracy Galindo" href="#">
-                      <img src="./images/TracyGalindo.jpg" title="Fashion Urban Jungle" alt="" />
+                      <img src="./images/Photos/Tracy/Fashion_Urban_Jungle.jpg" title="Fashion Urban Jungle" alt="" />
                       <h2 aria-label="Nom de la photographe">Tracy Galindo</h2>
                   </a>
                   <h3 aria-label="Lieu d'excercie de la photographe">Montreal, Canada</h3>
@@ -167,7 +167,7 @@
               </div>
               <div class="content__photographer__profile" aria-label="Informations du profil de la photographe Rhode Dubois">
                   <a role="link" aria-label="Lien vers le profil de Rhode Dubois" href="#">
-                      <img src="./images/RhodeDubois.jpg" title="Fashion Melody Red on Stripes" alt="" />
+                      <img src="./images/Photos/Rhode/Fashion_Melody_Red_on_Stripes.jpg" title="Fashion Melody Red on Stripes" alt="" />
                       <h2 aria-label="Nom de la photographe">Rhode Dubois</h2>
                   </a>
                   <h3 aria-label="Lieu d'excercie de la photographe">Barcelona, Spain</h3>
@@ -196,7 +196,7 @@
               </div>
               <div class="content__photographer__profile" aria-label="Informations du profil du photographe Marcel Nikolic">
                   <a role="link" aria-label="Lien vers le profil de Marcel Nikolic" href="#">
-                      <img src="./images/MarcelNikolic.jpg" title="Travel Tower" alt="" />
+                      <img src="./images/Photos/Marcel/Travel_Tower.jpg" title="Travel Tower" alt="" />
                       <h2 aria-label="Nom du photographe">Marcel Nikolic</h2>
                   </a>
                   <h3 aria-label="Lieu d'excercie du photographe">Berlin, Germany</h3>
@@ -216,8 +216,20 @@
                   </div>
               </div>
           </section>
-      </main>
+      </main> -->
+      <!-- MAIN CONTENT -->
+   
+
+      <section
+        class="photographers"
+        id="photographers"
+        aria-label="photographers"
+      ></section>
+    </main>
+      
+    </section>
   </div>
+  <script src="./javaScript/photographers.js"></script>
   <script src="./javaScript/index.js"></script>
   </body>
 </html>
