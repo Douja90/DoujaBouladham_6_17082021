@@ -269,6 +269,14 @@ body {
     font-size: 1.6em;
   }
 
+  .modal-contact__content h1 {
+    font-size: 1.8em;
+    margin-top: 3%;
+  }
+  .modal-contact__content h2 {
+    font-size: 1.8em;
+  }
+
   .header {
     display: flex;
     flex-direction: column;
@@ -297,6 +305,74 @@ body {
     justify-content: center;
     row-gap: 10px;
     padding: 0px 40px;
+  }
+
+  .header-photographer {
+    margin-left: 17%;
+  }
+
+  .modal-contact__content {
+    margin: 0% auto;
+    height: 100%;
+  }
+  .modal-contact__content__body {
+    padding: 5% 3% 10% 3%;
+  }
+  .modal-contact__content__close {
+    top: 30px;
+  }
+
+  .formData label {
+    font-size: 1.3em;
+    font-weight: 300;
+  }
+  .formData input {
+    margin-bottom: 5%;
+  }
+
+  .btn-submit {
+    padding: 8px 50px;
+    margin: 8% 28%;
+  }
+
+  .content-photographer__header__profile {
+    margin-left: 0%;
+    margin-bottom: 5%;
+  }
+  .content-photographer__header__contact a {
+    left: 32%;
+    left: 30%;
+  }
+  .content-photographer__header__photo img {
+    width: 100px;
+    height: 100px;
+  }
+  .content-photographer__like {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+  .content-photographer__work {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+  .content-photographer__photography__content {
+    flex: 100%;
+  }
+  .content-photographer__photography__content img {
+    height: 300px;
+    object-position: top;
   }
 }
 /* PHOTOGRAPHERS */

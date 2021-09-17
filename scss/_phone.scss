@@ -36,17 +36,17 @@
             }       
     }
     
-    // .modal-contact__content {
-    //     h1 {
-    //             font-size: 1.8em;
-    //             margin-top: 3%;
-    //         }
+    .modal-contact__content {
+        h1 {
+                font-size: 1.8em;
+                margin-top: 3%;
+            }
         
-    //     h2 {
+        h2 {
            
-    //             font-size: 1.8em;
-    //         }
-    // }
+                font-size: 1.8em;
+            }
+    }
 // Header home page 
 
 .header {
@@ -76,78 +76,78 @@
     }
 }
 
-// .header-photographer {
-//         margin-left: 17%; 
-// }
+.header-photographer {
+        margin-left: 17%; 
+}
 
-// .modal-contact {
-//     &__content {
-//             margin: 0% auto;
-//             height: 100%;
+.modal-contact {
+    &__content {
+            margin: 0% auto;
+            height: 100%;
         
-//         &__body {
-//             padding: 5% 3% 10% 3%;
-//         }
+        &__body {
+            padding: 5% 3% 10% 3%;
+        }
         
-//         &__close {
-//             top: 30px;
-//         }
-//     } 
-// }
+        &__close {
+            top: 30px;
+        }
+    } 
+}
 
-// .formData {
-//     label {
-//         font-size: 1.3em;
-//         font-weight: 300;
-//     }
-//     input {
-//             margin-bottom: 5%;
-//     }
-// }
-// .btn-submit {
+.formData {
+    label {
+        font-size: 1.3em;
+        font-weight: 300;
+    }
+    input {
+            margin-bottom: 5%;
+    }
+}
+.btn-submit {
   
-//         padding: 8px 50px;
-//         margin: 8% 28%;
-// }
+        padding: 8px 50px;
+        margin: 8% 28%;
+}
 
-// .content-photographer{
-//     &__header {
+.content-photographer{
+    &__header {
        
-//         &__profile {
-//                 margin-left: 0%;
-//                 margin-bottom: 5%;
-//         }
-//         &__contact {
-//             a {
-//                     left: 32%;
-//                     left: 30%;
-//             }
-//         }
-//         &__photo {
-//             img {
-//                     width: 100px;
-//                     height: 100px;
-//                 }
-//         }
-//     }
-//     &__like {
-//             @include sr-only
-//     }
-//     &__work {
-//                 @include sr-only
-//             }
-//      &__photography {
-//             &__content {
-//                 flex: 100%;
-//                 img {
+        &__profile {
+                margin-left: 0%;
+                margin-bottom: 5%;
+        }
+        &__contact {
+            a {
+                    left: 32%;
+                    left: 30%;
+            }
+        }
+        &__photo {
+            img {
+                    width: 100px;
+                    height: 100px;
+                }
+        }
+    }
+    &__like {
+            @include sr-only
+    }
+    &__work {
+                @include sr-only
+            }
+     &__photography {
+            &__content {
+                flex: 100%;
+                img {
                     
-//                         height: 300px;
-//                         object-position: top;
-//                 }
+                        height: 300px;
+                        object-position: top;
+                }
                
-//             }
-//         }
+            }
+        }
     
-// }
+}
 
 }
