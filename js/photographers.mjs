@@ -1,5 +1,4 @@
-
-const photographersData  = { "photographers": [
+ const photographersData  = { "photographers": [
     {
         name: "Mimi Keel",
         id: 243,
@@ -7,8 +6,8 @@ const photographersData  = { "photographers": [
         country: "UK",
         tags: ["portrait", "events", "travel", "animals"],
         tagline: "Voir le beau dans le quotidien",
-        price: 400,
-        portrait: ("../images/MimiKeel.jpg"),
+        price: "400 €/jour",
+        portrait: ("Portrait_Nora.jpg"),
         alt: "Mimi Keel portrait",
     },
     {
@@ -18,8 +17,8 @@ const photographersData  = { "photographers": [
         country: "France",
         tags: ["sports", "architecture"],
         tagline: "Capturer des compositions complexes",
-        price: 250,
-        portrait: "EllieRoseWilkens.jpg",
+        price: "250 €/jour",
+        portrait: ("Architecture_Horseshoe.jpg"),
         alt: "Ellie-Rose Wilkens portrait",
     },
     {
@@ -29,8 +28,8 @@ const photographersData  = { "photographers": [
         country: "Canada",
         tags: ["art", "fashion", "events"],
         tagline: "Photographe freelance",
-        price: 500,
-        portrait: "TracyGalindo.jpg",
+        price: "500 €/jour",
+        portrait: ("Fashion_Urban_Jungle.jpg"),
         alt: "Tracy Galindo portrait",
     },
     {
@@ -40,8 +39,8 @@ const photographersData  = { "photographers": [
       country: "Mexico",
       tags: ["travel", "portrait"],
       tagline: "Toujours aller de l'avant",
-      price: 350,
-      portrait: "NabeelBrandford.jpg",
+      price: "350 €/jour",
+      portrait: ("NabeelBrandford.jpg"),
       alt: "Nabeel Bradford portrait",
     },
     {
@@ -51,8 +50,8 @@ const photographersData  = { "photographers": [
       country: "Spain",
       tags: ["sport", "fashion", "events", "animals"],
       tagline: "Je crée des souvenirs",
-      price: 275,
-      portrait: "RhodeDubois.jpg",
+      price: "275 €/jour",
+      portrait: ("Fashion_Melody_Red_on_Stripes.jpg"),
       alt: "Rhode Dubois portrait",
     },
     {
@@ -62,8 +61,8 @@ const photographersData  = { "photographers": [
       country: "Germany",
       tags: ["travel", "architecture"],
       tagline: "Toujours à la recherche de LA photo",
-      price: 300,
-      portrait: "MarcelNikolic.jpg",
+      price: "300 €/jour",
+      portrait: ("Travel_Tower.jpg"),
       alt: "Marcel Nikolic portrait",
     }
   ],
@@ -667,43 +666,4 @@ const photographersData  = { "photographers": [
   ],
 };
 
-
-
-
-const photographers = photographersData.photographers;
-
-let photographersHTML = "";
- 
-
-
-photographers.forEach((photograph)=>{
-  
-  
-     photographersHTML += `
-        
-     <div >
-     <img ${photograph.portrait} alt="${photograph.alt}" />
-     <h2> ${photograph.name}</h2>
-
- <h3> ${photograph.city}</h3>
- <p> ${photograph.tagline}</p>
- <h4>${photograph.price}</h4>
-             
-</div>
-               <div>
-                  ${ photograph.tags.map((tags)=>{
-                         
-                          return `<span>${tags}</span>`
-                      
-                    }).join(" ")
-                   }
-               </div>    
-     `
-});
-
-document.querySelector("#photographers").innerHTML = photographersHTML;
-
-// create photograph
-
-
-
+export default photographersData;
