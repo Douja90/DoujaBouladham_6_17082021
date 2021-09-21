@@ -15,7 +15,9 @@
             object-position: top;
             clip-path: ellipse(50% 50%);
         }
-        &__tag ul {
+        &__tag 
+            
+            ul {
             display: flex;
             column-gap: 5px;
             justify-content: center;

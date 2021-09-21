@@ -467,7 +467,7 @@ body {
 .content-photographer__header__profile__tag ul {
   display: flex;
   column-gap: 5px;
-  justify-content: center;
+  justify-content: flex-start;
   list-style-type: none;
   margin-top: 3%;
 }
