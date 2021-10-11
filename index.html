@@ -8,6 +8,7 @@
       href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&display=swap"
       rel="stylesheet"
     />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <title>FishEye</title>
   </head>
   <body>
@@ -28,38 +29,30 @@
               </svg>
           </a>
           <nav role="navigation" class="header__navigation" aria-label="photographer categories">
-              <ul>
-                  <li class="header__navigation__item" id="item-portrait">
-                      <a role="link" href="#">#Portrait</a>
-                      <span class="sr-only">Portrait</span>
+              <ul id="tags">
+                  <li class="header__navigation__item" data-tag ="Portrait" id="item-portrait">
+                      <a role="link" data-tag ="Portrait" href="#">#Portrait</a>
                   </li>
-                  <li class="header__navigation__item" id="item-art">
-                      <a role="link" href="#">#Art</a>
-                      <span class="sr-only">Art</span>
+                  <li class="header__navigation__item" data-tag ="art" id="item-art">
+                      <a role="link" data-tag ="art" href="#">#Art</a>
                   </li>
-                  <li class="header__navigation__item" id="item-fashion">
-                      <a role="link" href="#">#Fashion</a>
-                      <span class="sr-only">Fashion</span>
+                  <li class="header__navigation__item" data-tag ="fashion" id="item-fashion">
+                      <a role="link"  data-tag ="fashion" href="#">#Fashion</a>
                   </li>
-                  <li class="header__navigation__item" id="item-architecture">
-                      <a role="link" href="#">#Architecture</a>
-                      <span class="sr-only">Architecture</span>
+                  <li class="header__navigation__item" data-tag ="architecture" id="item-architecture">
+                      <a role="link" data-tag ="architecture" href="#">#Architecture</a>
                   </li>
-                  <li class="header__navigation__item" id="item-travel">
-                      <a role="link" href="#">#Travel</a>
-                      <span class="sr-only">Travel</span>
+                  <li class="header__navigation__item" data-tag ="travel" id="item-travel">
+                      <a role="link" data-tag ="travel" href="#">#Travel</a>
                   </li>
-                  <li class="header__navigation__item" id="item-sport">
-                      <a role="link" href="#">#Sport</a>
-                      <span class="sr-only">Sport</span>
+                  <li class="header__navigation__item" data-tag ="sport" id="item-sport">
+                      <a role="link" data-tag ="sport" href="#">#Sport</a>
                   </li>
-                  <li class="header__navigation__item" id="item-animals">
-                      <a role="link" href="#">#Animals</a>
-                      <span class="sr-only">Animals</span>
+                  <li class="header__navigation__item" data-tag ="animals" id="item-animals">
+                      <a role="link" data-tag ="animals" href="#">#Animals</a>
                   </li>
-                  <li class="header__navigation__item" id="item-events">
-                      <a role="link" href="#">#Events</a>
-                      <span class="sr-only">Events</span>
+                  <li class="header__navigation__item" data-tag ="events" id="item-events">
+                      <a role="link" data-tag ="events" href="#">#Events</a>
                   </li>
               </ul>
           </nav>
@@ -229,6 +222,7 @@
     </section>
   </div>
   
-  <script src="js/index.js" type="module"></script>
+  <script src="/js/index.js" type="module"></script>
+  
   </body>
 </html>
