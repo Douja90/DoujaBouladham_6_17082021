@@ -56,22 +56,35 @@ $color-background-modal: rgba(196, 196, 196, 0.4);
 body {
     font-family: 'DM Sans', Arial, sans-serif;
     font-weight: 400;
+    margin-bottom: 15px;
   }
 
 .content {
+
+    &__header {
+        margin-top: -50px;
+        
+        margin-right: 10px;
+        padding-bottom: 30px;
+        padding-top: 30px;
+    }
     h1 {
         text-align: right;
         font-weight: 300;
         font-size: 1.6em;
         color: $color-primary;
-        margin-right: 10%;
-        margin-top: -3.1%;
-        margin-bottom: 4%;
+        // margin-right: 10%;
+        // margin-top: -50px;
+        // margin-bottom: 4%;
         
     }
     &__photographer__profile {
+
+        padding-bottom: 15px;
+        margin: 10px;
         a {
             text-decoration: none;
+            
         }
         h2 {
             font-weight: 300;
@@ -95,6 +108,9 @@ body {
             font-size: 0.7em;
             margin: 1%;
         }
+    }
+    &__photographer__profile__tag {
+        display: inline-flex;
     }
 }
 
