@@ -1,7 +1,6 @@
 
 import photographersData from "./photographers.mjs";
-
-console.log(photographersData.photographers)
+import createPhotographersDom from "./createPhotographersNode.mjs";
 
 const photographersDomNode = document.querySelector("#photographers");
  
@@ -9,50 +8,8 @@ const photographersDomNode = document.querySelector("#photographers");
  
 
  const photographers = photographersData.photographers;
-
- let photographersHTML = "";
-  
  
- 
- photographers.forEach((photograph)=>{
-   
-   
-      photographersHTML += `
-         
-      <div class="content__photographer__profile" >
-      
-      <a href="#">
-      <img src=../images/Photos/${photograph.portrait} alt="${photograph.alt}" />
-      <h2> ${photograph.name}</h2>  
-      </a>
- 
-      <h3> ${photograph.city}</h3>
-      <p> ${photograph.tagline}</p>
-      <h4>${photograph.price}</h4>
-     
-     <div class="content__photographer__profile">
-          ${ photograph.tags.map((tags)=>{
-                          
-             return `  <div class="content__photographer__profile__tag" aria-label="Tags correspondants au profil du photographe">
-             <ul>
-                 <li class="header__navigation__item" >
-                     <a role="link" href="#">#${tags}</a>
-                 </li>
-     
-      </div>  `
-     
-
-                       
-              }).join(" ")
-           }
-           
-      </div>
-              
-      `
- });
-
- 
- photographersDomNode.innerHTML = photographersHTML;
+ photographersDomNode.innerHTML = createPhotographersDom(photographers);
 
  document.querySelector("#tags").addEventListener("click", (event)=>{
 
@@ -60,13 +17,14 @@ const photographersDomNode = document.querySelector("#photographers");
 
             import("./filters.js").then((module)=>{
 
-                 const resultFilter = module.default(event.target?.dataset?.tag);
-
+                const resultFilter = module.default(event.target?.dataset?.tag);
+                 
                  if(resultFilter.length !== 0){
 
-                      console.log(resultFilter);// Afficher le html des photographes
+                    photographersDomNode.innerHTML = createPhotographersDom(resultFilter);
 
-                 }
+                 } 
+                 
 
             });
 
