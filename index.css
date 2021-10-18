@@ -94,6 +94,13 @@ body {
   color: #000000;
 }
 
+.photographers__home {
+  display: flex;
+  flex: 30%;
+  flex-wrap: wrap;
+  margin: 0;
+}
+
 /* HOME PAGE */
 .header {
   width: 75%;
@@ -251,6 +258,11 @@ body {
   margin-top: 2%;
   border: none;
   padding: 12px 24px;
+}
+
+.content__header h1 {
+  margin-top: -35px;
+  padding-right: 40px;
 }
 
 /* PHONE*/
@@ -606,6 +618,11 @@ body {
   margin: 0px;
   color: #901C1C;
   font-size: 1em;
+}
+
+#photographers {
+  padding-bottom: 0;
+  margin-bottom: -20px;
 }
 
 /*# sourceMappingURL=index.css.map */
