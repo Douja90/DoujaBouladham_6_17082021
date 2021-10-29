@@ -17,7 +17,7 @@ export default function createPhotographersDom(arr){
             <section class=" photographers__home">    
             <div class="content__photographer__profile" >
             
-            <a href="#">
+            <a href="./photographer-page.html?id=${photograph.id}">
             <img src=../images/Photos/${photograph.portrait} alt="${photograph.alt}" />
             <h2> ${photograph.name}</h2>  
             </a>
