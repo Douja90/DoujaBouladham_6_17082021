@@ -1,3 +1,621 @@
+.header
+{
+    &_logo
+    {
+        width: 250px;
+        height: 70px;
+        padding: 50px;
+
+        @include media-between("tablet-min", "desktop-max")
+        {
+            padding-bottom: 25px;
+        }
+
+        @include media-under("mobile-max")
+        {
+            width: 125px;
+            height: 40px;
+            padding: 25px;
+        }
+
+        &--photographerpage
+        {
+            @include media-under("mobile-max")
+            {
+                padding-bottom: 0px;
+            }
+        }
+    }
+}
+.presentation
+{
+    margin-left: 50px;
+    margin-right: 50px;
+    padding: 50px;
+    @include flex-row(space-between, stretch);
+    background-color: $background-grey;
+    @include media-under("tablet-max")
+    {
+        padding: 30px;
+    }
+    @include media-under("mobile-max")
+    {
+        margin: 0px;
+        background-color: #FFFFFF;
+    }
+
+    &_photographer
+    {
+        @include flex-col(space-between, stretch);
+        @include media-under("mobile-max")
+        {
+            width: calc(100% - 150px);
+        }
+
+        &_name
+        {
+            color: $secondary-color;
+            transition: color 300ms;
+            margin: 2px;
+        }
+
+        &_location
+        {
+            color: $primary-color;
+            margin: 2px;
+        }
+
+        &_description
+        {
+            color: $text-grey;
+            margin: 2px;
+        }
+
+        &_tags
+        {
+            @include flex-row(normal, center);
+            flex-wrap: wrap;
+
+            & span     // !!!!!!! METTRE EN GRAS
+            {
+                color: $primary-color;
+                border: 0.5px solid $border-grey;
+                border-radius: 12px;
+                margin: 3px;
+                padding-left: 6px;
+                padding-right: 6px;
+            }
+        }
+    }
+
+    &_contact
+    {
+        color: #FFFFFF;
+        background-color: $primary-color;
+        border: none;
+        border-radius: 5px;
+        transition: all 300ms;
+        cursor: pointer;
+
+        @include media-above("largedesktop-min")
+        {
+            width: 170px;
+            height: 68px;
+            padding: 20px;
+            position: relative;
+            top: 10px;
+            right: 100px;
+        }
+        @include media-under("desktop-max")
+        {
+            width: 150px;
+            padding: 10px;
+            position: fixed;
+            left: calc(50vw - 85px);
+            bottom: 55px;
+        }
+
+        & h3
+        {
+            margin: 0px;
+        }
+
+        &:hover
+        {
+            background-color: $tertiary-color;
+            color: #000000;
+            transform: scale(1.10);
+        }
+    }
+
+    &_profilepicture
+    {
+        width: 200px;
+        height: 200px;
+        @include media-between("tablet-min", "desktop-max")
+        {
+            width: 150px;
+            height: 150px;
+        }
+        @include media-under("mobile-max")
+        {
+            width: 100px;
+            height: 100px;
+        }
+        object-fit: cover;
+        margin: 20px;
+        border-radius: 100px;
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.25);
+        transition: box-shadow 300ms;
+    }
+}
+
+
+// --------- SORTING ---------
+
+.sorting
+{
+    width: 100%;
+    padding: 50px;
+    padding-top: 30px;
+    padding-bottom: 0px;
+    @include media-under("mobile-max")
+    {
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 0px;
+    }
+    @include flex-row(flex-start, center);
+
+    & label     // !!!!!!! METTRE EN GRAS
+    {
+        color: #000000;
+        margin-right: 30px;
+    }
+
+    &_select
+    {
+        height: 50px;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        background-color: $primary-color;
+        color: #FFFFFF;
+        cursor: pointer;
+    }
+}
+
+
+// --------- GALLERY ---------
+
+.gallery
+{
+    padding: 30px;
+    @include media-under("mobile-max")
+    {
+        padding: 20px;
+    }
+    @include flex-row(space-between, stretch);
+    flex-wrap: wrap;
+
+    &_element
+    {
+        padding: 20px;
+        width: 350px;
+        @include media-between("tablet-min", "desktop-max")
+        {
+            width: 44%;
+        }
+        @include media-under("mobile-max")
+        {
+            width: 100%;
+            padding: 10px;
+        }
+        @include flex-col(start, center);
+
+        &_picture
+        {
+            width: 100%;
+            height: 300px;
+            transition: all 300ms;
+            cursor: pointer;
+            @include media-under("mobile-max")
+            {
+                height: 190px;
+            }
+
+            &:hover
+            {
+                transform: scale(1.04);
+            }
+
+            & *
+            {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 5px;
+            }
+        }
+
+        &_legend
+        {
+            width: 100%;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            @include flex-row(space-between, flex-start);
+            color: $primary-color;
+
+            &_title
+            {
+                margin: 0px;
+            }
+
+            &_likes
+            {
+                padding-top: 2px;
+                @include flex-row(space-between, center);
+
+                &_number
+                {
+                    margin: 0px;
+                    margin-right: 10px;
+                }
+
+                &_heart
+                {
+                    transition: all 200ms;
+                    cursor: pointer;
+
+                    &:hover
+                    {
+                        transform: scale(1.3);
+                    }
+                }
+            }
+        }
+
+        &_date
+        {
+            display: none;
+        }
+    }
+}
+
+
+// --------- CONTACT MODAL ---------
+
+.contact
+{
+    &_background
+    {
+        background-color: rgba(255, 255, 255, 0.7);
+        display: none;
+        position: fixed;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+    }
+
+    &_content
+    {
+        width: 40%;
+        height: 80%;
+        left: calc(30% - 30px);
+        top: calc(10% - 30px);
+        @include media-under("tablet-max")
+        {
+            width: calc(100% - 60px);
+            height: calc(100% - 60px);
+            top: 0;
+            left: 0;
+        }
+        background-color: $tertiary-color;
+        padding: 30px;
+        border-radius: 5px;
+        position: relative;
+        @include flex-col(space-between, stretch);
+        overflow: hidden;
+        animation: modalopen 300ms ease-in-out;
+
+        &.isClosed
+        {
+            animation: modalclose 300ms ease-in-out;
+        }
+
+        &:hover
+        {
+            overflow-y: auto;
+        }
+    }
+
+    &_close
+    {
+        position: absolute;
+        top: 30px;
+        right: 40px;
+        padding: 10px;
+        cursor: pointer;
+        z-index: 1;
+
+        &:before, &:after
+        {
+            position: absolute;
+            width: 3px;
+            height: 30px;
+            content: " ";
+            background-color: #FFFFFF;
+        }
+
+        &:before
+        {
+            transform: rotate(45deg);
+        }
+
+        &:after
+        {
+            transform: rotate(-45deg);
+        }
+    }
+
+    &_text
+    {
+        margin-bottom: 20px;
+
+        & p
+        {
+            margin: 0px;
+        }
+    }
+
+    &_form
+    {
+        margin-top: 5px;
+        margin-bottom: 5px;
+
+        &_label
+        {
+            display: inline-block;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            color: $contact-grey;
+        }
+        &_input
+        {
+            width: calc(100% - 25px);
+            height: 3vh;
+            padding: 10px;
+            border: none;
+            border-radius: 3px;
+            &#message
+            {
+                height: 15vh;
+            }
+
+            &:focus
+            {
+                outline: none;
+            }
+        }
+    }
+
+    &_submit
+    {
+        background-color: $primary-color;
+        color: #FFFFFF;
+        width: 170px;
+        margin-top: 20px;
+        padding: 15px;
+        padding-left: 30px;
+        padding-right: 30px;
+        border: none;
+        border-radius: 3px;
+    }
+}
+
+
+// --------- LIGHTBOX ---------
+
+.lightbox
+{
+    &_background
+    {
+        background-color: rgba(255, 255, 255, 0.9);
+        display: none;
+        position: fixed;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+    }
+
+    &_content
+    {
+        width: 80%;
+        height: 90%;
+        left: calc(10% - 30px);
+        top: calc(5% - 30px);
+        @include media-under("tablet-max")
+        {
+            width: calc(100% - 60px);
+            height: calc(100% - 60px);
+            top: 0;
+            left: 0;
+        }
+        padding: 30px;
+        position: relative;
+        @include flex-row(center, center);
+        overflow: hidden;
+        animation: modalopen 300ms ease-in-out;
+
+        &.isClosed
+        {
+            animation: modalclose 300ms ease-in-out;
+        }
+    }
+
+    &_close
+    {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        padding: 10px;
+        cursor: pointer;
+        z-index: 1;
+
+        &:before, &:after
+        {
+            position: absolute;
+            width: 5px;
+            height: 40px;
+            content: " ";
+            background-color: $primary-color;
+        }
+
+        &:before
+        {
+            transform: rotate(45deg);
+        }
+
+        &:after
+        {
+            transform: rotate(-45deg);
+        }
+    }
+
+    &_previousbutton, &_nextbutton
+    {
+        width: 40px;
+        height: 50px;
+        cursor: pointer;
+        z-index: 1;
+        position: relative;
+
+        &:before, &:after
+        {
+            position: absolute;
+            width: 5px;
+            height: 30px;
+            content: " ";
+            background-color: $primary-color;
+        }
+    }
+
+    &_previousbutton
+    {
+        margin-right: 20px;
+
+        &:before
+        {
+            transform: rotate(-45deg);
+            top: calc(50% - 13px + 9px);
+            left: calc(50% - 4px);
+        }
+
+        &:after
+        {
+            transform: rotate(45deg);
+            top: calc(50% - 13px - 9px);
+            left: calc(50% - 4px);
+        }
+    }
+
+    &_nextbutton
+    {
+        margin-left: 20px;
+
+        &:before
+        {
+            transform: rotate(45deg);
+            top: calc(50% - 13px + 9px);
+            right: calc(50% - 4px);
+        }
+
+        &:after
+        {
+            transform: rotate(-45deg);
+            top: calc(50% - 13px - 9px);
+            right: calc(50% - 4px);
+        }
+    }
+
+    &_container
+    {
+        width: 90%;
+        height: 90%;
+        @include flex-col(center, center);
+
+        &_picture
+        {
+            width: 100%;
+            height: 100%;
+            
+            & *
+            {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+
+        &_title
+        {
+            margin-top: 20px;
+            margin-bottom: 0px;
+            color: $primary-color;
+        }
+    }
+}
+
+
+// --------- BOTTOM BAR ---------
+
+.bottom_bar
+{
+    width: 310px;
+    height: 70px;
+    padding-left: 30px;
+    padding-right: 30px;
+    @include media-under("tablet-max")
+    {
+        width: 200px;
+        height: 50px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    position: fixed;
+    bottom: 0px;
+    right: 60px;
+    @include media-under("desktop-max")
+    {
+        position: static;
+    }
+    @include flex-row(space-between, center);
+    background-color: $tertiary-color;
+    color: #000000;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+
+    &_likes
+    {
+        @include flex-row(space-between, center);
+
+        &_number
+        {
+            margin-right: 10px;
+        }
+
+        &_heart
+        {
+            width: 18px;
+        }
+    }
+}
+
+
 .header-photographer {
     margin-left: 4.5%;
     margin-top: 2%;
