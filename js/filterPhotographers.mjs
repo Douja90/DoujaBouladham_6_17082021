@@ -7,12 +7,30 @@ export default function filterPhotographerById(){
 
     const photographerId = urlParams.get("id");
 
-    return photographersData?.media.filter((media)=>{
+    // On filtre les medias du photographe grace a son Id
+
+    const photographerMedias = photographersData?.media.filter((media)=>{
       
          return Number(media?.photographerId) === Number(photographerId);
      
     });
 
+    // On filtre les informations du photographe grace a son Id
+
+    const photographerInfo = photographersData?.photographers.filter((photographer)=>{
+
+         return Number(photographerId) === Number(photographer?.id);
+
+    });
+
+
+    return {
+
+          infos:photographerInfo,
+
+          medias:photographerMedias
+
+    }
    
 
 };

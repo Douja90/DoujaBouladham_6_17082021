@@ -71,7 +71,7 @@
        id: 342550,
         photographerId: 82,
         image: "Fashion_Yellow_Beach.jpg",
-        alt: "Fashion Yellow Beach",
+        alt: ("Fashion Yellow Beach"),
         tags: ["Fashion"],
         likes: 62,
         date: "2011-12-08",
@@ -80,7 +80,7 @@
     {
       id: 8520927,
       photographerId: 82,
-      image: "Fashion_Urban_Jungle.jpg",
+      image: ("Fashion_Urban_Jungle.jpg"),
       alt: "Fashion Urban Jungle",
       tags: ["Fashion"],
       likes: 11,
@@ -90,7 +90,7 @@
     {
       id: 9025895,
       photographerId: 82,
-      image: "Fashion_Pattern_on_Pattern.jpg",
+      image:( "Fashion_Pattern_on_Pattern.jpg"),
       alt: "Fashion Pattern on Pattern",
       tags: ["Fashion"],
       likes: 72,
@@ -100,7 +100,7 @@
     {
       id: 9275938,
       photographerId: 82,
-      image: "Event_WeddingGazebo.jpg",
+      image: ("Event_WeddingGazebo.jpg"),
       alt: "Event Edding Gazebo",
       tags: ["Events"],
       likes: 69,
@@ -110,7 +110,7 @@
     {
       id: 2053494,
       photographerId: 82,
-      image: "Event_Sparklers.jpg",
+      image:( "Event_Sparklers.jpg"),
       alt: "Event Sparklers",
       tags: ["Events"],
       likes: 2,
@@ -120,7 +120,7 @@
     {
       id: 7324238,
       photographerId: 82,
-      image: "Event_18thAnniversary.jpg",
+      image: ("Event_18thAnniversary.jpg"),
       alt: "Event 18th Anniversary",
       tags: ["Events"],
       likes: 33,
@@ -130,7 +130,7 @@
     {
       id: 8328953,
       photographerId: 82,
-      video: "Art_Wooden_Horse_Sculpture.mp4",
+      video: ("Art_Wooden_Horse_Sculpture.mp4"),
       alt: "Art Wooden Horse Sculpture",
       tags: ["Art"],
       likes: 24,
@@ -140,7 +140,7 @@
     {
       id: 7502053,
       photographerId: 82,
-      image: "Art_Triangle_Man.jpg",
+      image: ("Art_Triangle_Man.jpg"),
       alt: "Art Triangle Man",
       tags: ["Art"],
       likes: 88,
@@ -150,7 +150,7 @@
     {
       id: 8523492,
       photographerId: 82,
-      image: "Art_Purple_light.jpg",
+      image: ("Art_Purple_light.jpg"),
       alt: "Art Purple Light",
       tags: ["Art"],
       likes: 24,
@@ -160,7 +160,7 @@
     {
       id: 75902334,
       photographerId: 82,
-      image: "Art_Mine.jpg",
+      image: ("Art_Mine.jpg"),
       alt: "Art Mine",
       tags: ["Art"],
       likes: 75,
@@ -171,7 +171,7 @@
     {
       id: 73852953,
       photographerId: 925,
-      image: "Sport_2000_with_8.jpg",
+      image: ("Sport_2000_with_8.jpg"),
       alt: "Sport 2000 with 8",
       tags: ["Sport"],
       likes: 52,
@@ -181,7 +181,7 @@
     {
       id: 92758372,
       photographerId: 925,
-      image: "Fashion_Wings.jpg",
+      image: ("Fashion_Wings.jpg"),
       alt: "Fashion Wings",
       tags: ["Fashion"],
       likes: 58,
@@ -191,7 +191,7 @@
     {
       id: 32958383,
       photographerId: 925,
-      image: "Fashion_Melody_Red_on_Stripes.jpg",
+      image: ("Fashion_Melody_Red_on_Stripes.jpg"),
       alt: "Fashion Melody Red on Stripes",
       tags: ["Fashion"],
       likes: 11,
@@ -201,7 +201,7 @@
     {
       id: 928587383,
       photographerId: 925,
-      image: "Event_VentureConference.jpg",
+      image: ("Event_VentureConference.jpg"),
       alt: "Event Venture Conference",
       tags: ["Events"],
       likes: 2,
@@ -211,7 +211,7 @@
     {
       id: 725639493,
       photographerId: 925,
-      image: "Event_ProductPitch.jpg",
+      image: ("Event_ProductPitch.jpg"),
       alt: "Event Product Pitch",
       tags: ["Events"],
       likes: 3,
@@ -221,7 +221,7 @@
     {
       id: 23394384,
       photographerId: 925,
-      image: "Event_KeyboardCheck.jpg",
+      image: ("Event_KeyboardCheck.jpg"),
       alt: "Event Keyboard Check",
       tags: ["Events"],
       likes: 52,
@@ -241,7 +241,7 @@
     {
       id: 593834784,
       photographerId: 925,
-      image: "Animals_Majesty.jpg",
+      image: ("Animals_Majesty.jpg"),
       alt: "Animals Majesty",
       tags: ["Animals"],
       likes: 52,
@@ -251,7 +251,7 @@
     {
       id: 83958935,
       photographerId: 925,
-      video: "Animals_Puppiness.mp4",
+      video: ("Animals_Puppiness.mp4"),
       alt: "Animals Puppiness",
       tags: ["Animals"],
       likes: 52,
@@ -262,7 +262,7 @@
     {
       id: 394583434,
       photographerId: 527,
-      video: "Travel_Rock_Mountains.mp4",
+      video: ("Travel_Rock_Mountains.mp4"),
       alt: "Travel Rock Mountains",
       tags: ["Travel"],
       likes: 23,
@@ -272,7 +272,7 @@
     {
       id: 343423425,
       photographerId: 527,
-      image: "Travel_Outdoor_Baths.jpg",
+      image:( "Travel_Outdoor_Baths.jpg"),
       alt: "Travel Outdoor Baths",
       tags: ["Travel"],
       likes: 101,
@@ -282,7 +282,7 @@
     {
       id: 73434243,
       photographerId: 527,
-      image: "Travel_Road_into_Hill.jpg",
+      image: ("Travel_Road_into_Hill.jpg"),
       alt: "Travel Road into Hill",
       tags: ["Travel"],
       likes: 99,
@@ -292,7 +292,7 @@
     {
       id: 23425523,
       photographerId: 527,
-      image: "Travel_Bridge_into_Forest.jpg",
+      image: ("Travel_Bridge_into_Forest.jpg"),
       alt: "Travel Bridge into Forest",
       tags: ["Travel"],
       likes: 34,
@@ -302,7 +302,7 @@
     {
       id: 23134513,
       photographerId: 527,
-      image: "Travel_Boat_Wanderer.jpg",
+      image: ("Travel_Boat_Wanderer.jpg"),
       alt: "Travel Boat Wanderer",
       tags: ["Travel"],
       likes: 23,
@@ -312,7 +312,7 @@
     {
       id: 92352352,
       photographerId: 527,
-      image: "Portrait_Sunkissed.jpg",
+      image: ("Portrait_Sunkissed.jpg"),
       alt: "Portrait Sunkissed",
       tags: ["Portrait"],
       likes: 66,
@@ -322,7 +322,7 @@
     {
       id: 34513453,
       photographerId: 527,
-      image: "Portrait_Shaw.jpg",
+      image: ("Portrait_Shaw.jpg"),
       alt: "Portrait Shaw",
       tags: ["Portait"],
       likes: 52,
@@ -332,7 +332,7 @@
     {
       id: 23523533,
       photographerId: 527,
-      image: "Portrait_Alexandra.jpg",
+      image: ("Portrait_Alexandra.jpg"),
       alt: "Portrait Alexandra",
       tags: ["Portait"],
       likes: 95,
@@ -342,7 +342,7 @@
     {
       id: 525834234,
       photographerId: 527,
-      image: "Portrait_AfternoonBreak.jpg",
+      image: ("Portrait_AfternoonBreak.jpg"),
       alt: "Portrait Afternoon Break",
       tags: ["Portait"],
       likes: 25,
@@ -353,7 +353,7 @@
     {
       id: 623534343,
       photographerId: 243,
-      image: "Travel_Lonesome.jpg",
+      image: ("Travel_Lonesome.jpg"),
       alt: "Travel Lonesome",
       tags: ["Travel"],
       likes: 88,
@@ -363,7 +363,7 @@
     {
       id: 625025343,
       photographerId: 243,
-      image: "Travel_HillsideColor.jpg",
+      image: ("Travel_HillsideColor.jpg"),
       alt: "Travel Hill side Color",
       tags: ["Travel"],
       likes: 85,
@@ -373,7 +373,7 @@
     {
       id: 2525345343,
       photographerId: 243,
-      image: "Portrait_Wednesday.jpg",
+      image: ("Portrait_Wednesday.jpg"),
       alt: "Portrait Wednesday",
       tags: ["Portait"],
       likes: 34,
@@ -383,7 +383,7 @@
     {
       id: 2523434634,
       photographerId: 243,
-      image: "Portrait_Nora.jpg",
+      image: ("Portrait_Nora.jpg"),
       alt: "Portrait Nora",
       tags: ["Portait"],
       likes: 63,
@@ -393,7 +393,7 @@
     {
       id: 398847109,
       photographerId: 243,
-      image: "Portrait_Background.jpg",
+      image: ("Portrait_Background.jpg"),
       alt: "Portrait Background",
       tags: ["Portait"],
       likes: 55,
@@ -403,7 +403,7 @@
     {
       id: 2534342,
       photographerId: 243,
-      image: "Event_SeasideWedding.jpg",
+      image: ("Event_SeasideWedding.jpg"),
       alt: "Event Seaside Wedding",
       tags: ["Events"],
       likes: 25,
@@ -413,7 +413,7 @@
     {
       id: 65235234,
       photographerId: 243,
-      image: "Event_PintoWedding.jpg",
+      image: ("Event_PintoWedding.jpg"),
       alt: "Event Pinto Wedding",
       tags: ["Events"],
       likes: 52,
@@ -423,7 +423,7 @@
     {
       id: 23523434,
       photographerId: 243,
-      image: "Event_BenevidesWedding.jpg",
+      image: ("Event_BenevidesWedding.jpg"),
       alt: "Event Benevides Wedding",
       tags: ["Events"],
       likes: 77,
@@ -433,7 +433,7 @@
     {
       id: 5234343,
       photographerId: 243,
-      video: "Animals_Wild_Horses_in_the_mountains.mp4",
+      video: ("Animals_Wild_Horses_in_the_mountains.mp4"),
       tags: ["Animals"],
       alt: "Animals Wild Horses in the mountains",
       likes: 142,
@@ -443,7 +443,7 @@
     {
       id: 95234343,
       photographerId: 243,
-      image: "Animals_Rainbow.jpg",
+      image: ("Animals_Rainbow.jpg"),
       alt: "Animals Rainbow",
       tags: ["Animals"],
       likes: 59,
@@ -454,7 +454,7 @@
     {
       id: 52343416,
       photographerId: 195,
-      image: "Travel_Tower.jpg",
+      image:( "Travel_Tower.jpg"),
       alt: "Travel Tower",
       tags: ["Travel"],
       likes: 25,
@@ -464,7 +464,7 @@
     {
       id: 2523434,
       photographerId: 195,
-      image: "Travel_SunsetonCanals.jpg",
+      image: ("Travel_SunsetonCanals.jpg"),
       alt: "Travel Sunset on Canals",
       tags: ["Travel"],
       likes: 53,
@@ -474,7 +474,7 @@
     {
       id: 95293534,
       photographerId: 195,
-      image: "Travel_OpenMountain.jpg",
+      image: ("Travel_OpenMountain.jpg"),
       alt: "Travel Open Mountain",
       tags: ["Travel"],
       likes: 33,
@@ -484,7 +484,7 @@
     {
       id: 356234343,
       photographerId: 195,
-      image: "Travel_Bike_and_Stair.jpg",
+      image:( "Travel_Bike_and_Stair.jpg"),
       alt: "Travel Bike and Stair",
       tags: ["Travel"],
       likes: 53,
@@ -494,7 +494,7 @@
     {
       id: 235234343,
       photographerId: 195,
-      image: "Travel_Adventure_Door.jpg",
+      image: ("Travel_Adventure_Door.jpg"),
       alt: "Travel Adventure Door",
       tags: ["Travel"],
       likes: 63,
@@ -504,7 +504,7 @@
     {
       id: 6234234343,
       photographerId: 195,
-      image: "Architecture_Contrast.jpg",
+      image: ("Architecture_Contrast.jpg"),
       alt: "Architecture Contrast",
       tags: ["Architecture"],
       likes: 52,
@@ -514,7 +514,7 @@
     {
       id: 6525666253,
       photographerId: 195,
-      image: "Architecture_On_a_hill.jpg",
+      image: ("Architecture_On_a_hill.jpg"),
       alt: "Architecture on a hill",
       tags: ["Architecture"],
       likes: 63,
@@ -524,7 +524,7 @@
     {
       id: 98252523433,
       photographerId: 195,
-      image: "Architecture_Dome.jpg",
+      image: ("Architecture_Dome.jpg"),
       alt: "Architecture Dome",
       tags: ["Architecture"],
       likes: 88,
@@ -535,7 +535,7 @@
       id: 9259398453,
       photographerId: 195,
       video:
-        "Architecture_coverr_circle_empty_highway_in_buenos_aires_587740985637.mp4",
+        ("Architecture_coverr_circle_empty_highway_in_buenos_aires_587740985637.mp4"),
       alt: "Architecture cover circle empty highway in buenos aires",
       tags: ["Architecture"],
       likes: 57,
@@ -545,7 +545,7 @@
     {
       id: 3523523534,
       photographerId: 195,
-      image: "Architecture_Corner_Room.jpg",
+      image: ("Architecture_Corner_Room.jpg"),
       alt: "Architecture Corner Room",
       tags: ["Architecture"],
       likes: 54,
@@ -556,7 +556,7 @@
     {
       id: 952343423,
       photographerId: 930,
-      video: "Sport_Tricks_in_the_air.mp4",
+      video: ("Sport_Tricks_in_the_air.mp4"),
       alt: "Sport Tricks in the air",
       tags: ["Sport"],
       likes: 150,
@@ -566,7 +566,7 @@
     {
       id: 235234343,
       photographerId: 930,
-      image: "Sport_Next_Hold.jpg",
+      image:( "Sport_Next_Hold.jpg"),
       alt: "Sport Next Hold",
       tags: ["Sport"],
       likes: 101,
@@ -576,7 +576,7 @@
     {
       id: 235343222,
       photographerId: 930,
-      image: "sport_water_tunnel.jpg",
+      image: ("sport_water_tunnel.jpg"),
       alt: "Sport water tunel",
       tags: ["Sport"],
       likes: 103,
@@ -586,7 +586,7 @@
     {
       id: 7775342343,
       photographerId: 930,
-      image: "Sport_Sky_Cross.jpg",
+      image: ("Sport_Sky_Cross.jpg"),
       alt: "Sport sky cross",
       tags: ["Sport"],
       likes: 77,
@@ -596,7 +596,7 @@
     {
       id: 9253445784,
       photographerId: 930,
-      image: "Sport_Race_End.jpg",
+      image: ("Sport_Race_End.jpg"),
       alt: "Sport Race End",
       tags: ["Sport"],
       likes: 88,
@@ -606,7 +606,7 @@
     {
       id: 22299394,
       photographerId: 930,
-      image: "Sport_Jump.jpg",
+      image: ("Sport_Jump.jpg"),
       alt: "Sport Jump",
       tags: ["Sport"],
       likes: 95,
@@ -616,7 +616,7 @@
     {
       id: 3452342633,
       photographerId: 930,
-      image: "Architecture_White_Light.jpg",
+      image: ("Architecture_White_Light.jpg"),
       alt: "Architecture white light",
       tags: ["Architecture"],
       likes: 52,
@@ -626,7 +626,7 @@
     {
       id: 939234243,
       photographerId: 930,
-      image: "Architecture_Water_on_Modern.jpg",
+      image: ("Architecture_Water_on_Modern.jpg"),
       alt: "Architecture water on modern",
       tags: ["Architecture"],
       likes: 55,
@@ -636,7 +636,7 @@
     {
       id: 222959233,
       photographerId: 930,
-      image: "Architecture_Horseshoe.jpg",
+      image: ("Architecture_Horseshoe.jpg"),
       alt: "Architecture Horse shoe",
       tags: ["Architecture"],
       likes: 85,
@@ -646,7 +646,7 @@
     {
       id: 965933434,
       photographerId: 930,
-      image: "Architecture_Cross_Bar.jpg",
+      image: ("Architecture_Cross_Bar.jpg"),
       alt: "Architecture Cross Bar",
       tags: ["architecture"],
       likes: 66,
@@ -656,7 +656,7 @@
     {
       id: 777723343,
       photographerId: 930,
-      image: "Architecture_Connected_Curves.jpg",
+      image: ("Architecture_Connected_Curves.jpg"),
       alt: "Architecture Connected Curves",
       tags: ["Architecture"],
       likes: 79,
