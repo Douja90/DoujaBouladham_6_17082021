@@ -23,7 +23,7 @@ export default function mediasFactory(media){
  function createImage(image, alt){
  
       return `
-        <img "gallery_element_picture" src= ../images/medias/ ${image}  alt="${alt}" /> 
+        <img class="gallery_element_picture" src= ../images/medias/${image}  alt="${alt}" /> 
       `;
  
  
@@ -34,7 +34,7 @@ export default function mediasFactory(media){
  
        return `
        
-          <video "gallery_element_picture" controls>
+          <video class= "gallery_element_picture" controls>
               
                <source src= ../images/medias/ ${video} type="video/mp4" alt=${alt}>
           

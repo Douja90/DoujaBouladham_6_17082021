@@ -23,12 +23,13 @@ import mediasFactory from "./mediasFactory.mjs";
                     <div class="gallery_element_legend_likes">
                         <h2 class="gallery_element_legend_likes_number">${media.likes}</h2>
                         <div class="gallery_element_legend_likes_heart">
-                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-heart likes__heart"></i>
                         </div>
                     </div>
                 </div>
                 <div class="gallery_element_date">${media.date}</div>
-            </div>  
+            </div> 
+          
                 
                 `;
 
