@@ -1,10 +1,10 @@
 // Header home page 
 
 .header {
-    width: 75%;
+    width: 100%;
     display: flex;
-    justify-content: space-evenly;
-    margin-top: 40px;
+    // justify-content: space-evenly;
+    margin-top: 5%;
    
     &__help-nav {
         position: fixed;
@@ -12,7 +12,7 @@
         top: 0px;
         left: 45%;
         text-decoration: none;
-        padding: 3px 14px;
+        // padding: 3px 14px;
         border-radius: 5px;
         color: black;
         font-weight: 700;
@@ -21,17 +21,48 @@
        
     }
     &__logo {
-        margin-left: 10px;
+        margin-left: 5px;
+        padding-left: 5%;
+        margin-top: -5px;
+
+        @include media-between("tablet-min", "desktop-max")
+        {
+            padding-bottom: 25px;
+        }
+
+        @include media-under("mobile-max")
+        {
+            width: 125px;
+            height: 40px;
+            margin-left: 0;
+            // padding: 25px;
+        }
+
       
     }
     &__navigation {
-        margin-top: 5px;
+        margin-top: -3%;
+        margin-left: 30%;
+        @include media-under("tablet-max")
+    {
+        
+        // top: 40%;
+        align-items: center;
+    }
+    @include media-under("mobile-max")
+    {
+        margin-top: -40px;
+        // top: 40%;
+        align-items: center;
+    }
         ul {
             display: flex;
-            column-gap: 8px;
+            flex-wrap: wrap;
+            column-gap: 0px;
             list-style-type: none; 
         }
         a {
+            
             @include button-tag
         }
         .sr-only {
@@ -42,6 +73,7 @@
             flex-wrap: wrap;
             align-items: center;
             justify-content: flex-start;
+            color: $color-secondary;
         }
         
     }
@@ -152,10 +184,24 @@
 }
 }
 
-.content__header{
-
-    h1{
-        margin-top: -35px;
-        padding-right: 40px;
+.photographers_button
+{
+    position: absolute;
+    top: 0px;
+    left: calc(50% - 80px);
+    width: 160px;
+    height: 30px;
+    @include flex-row(center, center);
+    background-color: $tertiary-color;
+    color: #000000;
+    border-radius: 5px;
+    @include media-under("mobile-max")
+    {
+        display: none;
     }
+}
+
+
+.content__header__title{
+
 }

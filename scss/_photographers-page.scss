@@ -4,7 +4,9 @@
     {
         width: 250px;
         height: 70px;
-        padding: 50px;
+        // padding: 50px;
+        margin-left: -50%;
+        padding-left: 0;
 
         @include media-between("tablet-min", "desktop-max")
         {
@@ -15,7 +17,7 @@
         {
             width: 125px;
             height: 40px;
-            padding: 25px;
+            // padding: 25px;
         }
 
         &--photographerpage
@@ -25,6 +27,45 @@
                 padding-bottom: 0px;
             }
         }
+    }
+}
+.nav
+{
+    margin-top: -30%;
+    @include flex-row(center, center);
+    @include media-under("mobile-max")
+    {
+        width: 90%;
+        align-self: center;
+        flex-wrap: wrap;
+    }
+
+    &_tag
+    {
+        background-color: "#FFFFFF";
+        color: $primary-color;
+        border: 0.5px solid $border-grey;
+        border-radius: 20px;
+        margin: 2px;
+        padding: 2px;
+        padding-left: 7px;
+        padding-right: 7px;
+        transition: all 300ms;
+        cursor: pointer;
+
+        &--active
+        {
+            background-color: $primary-color;
+            color: #FFFFFF;
+        }
+
+        &:hover
+        {
+            background-color: $primary-color;
+            color: #FFFFFF;
+        }
+
+        
     }
 }
 .presentation
@@ -57,6 +98,7 @@
             color: $secondary-color;
             transition: color 300ms;
             margin: 2px;
+            font-size: 0.2rem;
         }
 
         &_location
@@ -76,7 +118,7 @@
             @include flex-row(normal, center);
             flex-wrap: wrap;
 
-            & span     // !!!!!!! METTRE EN GRAS
+            & span    
             {
                 color: $primary-color;
                 border: 0.5px solid $border-grey;
@@ -139,8 +181,10 @@
         }
         @include media-under("mobile-max")
         {
-            width: 100px;
-            height: 100px;
+            width: 115px;
+            height: 115px;
+            margin-right: -40px;
+            padding-right: 0;
         }
         object-fit: cover;
         margin: 20px;
@@ -290,7 +334,7 @@
     &_background
     {
         background-color: rgba(255, 255, 255, 0.7);
-        display: none;
+        // display: none;
         position: fixed;
         z-index: 1;
         width: 100%;
@@ -367,6 +411,7 @@
         & p
         {
             margin: 0px;
+            font-size: 1rem;
         }
     }
 
@@ -416,160 +461,6 @@
 }
 
 
-// --------- LIGHTBOX ---------
-
-.lightbox
-{
-    &_background
-    {
-        background-color: rgba(255, 255, 255, 0.9);
-        display: none;
-        position: fixed;
-        z-index: 1;
-        width: 100%;
-        height: 100%;
-        left: 0;
-        top: 0;
-    }
-
-    &_content
-    {
-        width: 80%;
-        height: 90%;
-        left: calc(10% - 30px);
-        top: calc(5% - 30px);
-        @include media-under("tablet-max")
-        {
-            width: calc(100% - 60px);
-            height: calc(100% - 60px);
-            top: 0;
-            left: 0;
-        }
-        padding: 30px;
-        position: relative;
-        @include flex-row(center, center);
-        overflow: hidden;
-        animation: modalopen 300ms ease-in-out;
-
-        &.isClosed
-        {
-            animation: modalclose 300ms ease-in-out;
-        }
-    }
-
-    &_close
-    {
-        position: absolute;
-        top: 30px;
-        right: 30px;
-        padding: 10px;
-        cursor: pointer;
-        z-index: 1;
-
-        &:before, &:after
-        {
-            position: absolute;
-            width: 5px;
-            height: 40px;
-            content: " ";
-            background-color: $primary-color;
-        }
-
-        &:before
-        {
-            transform: rotate(45deg);
-        }
-
-        &:after
-        {
-            transform: rotate(-45deg);
-        }
-    }
-
-    &_previousbutton, &_nextbutton
-    {
-        width: 40px;
-        height: 50px;
-        cursor: pointer;
-        z-index: 1;
-        position: relative;
-
-        &:before, &:after
-        {
-            position: absolute;
-            width: 5px;
-            height: 30px;
-            content: " ";
-            background-color: $primary-color;
-        }
-    }
-
-    &_previousbutton
-    {
-        margin-right: 20px;
-
-        &:before
-        {
-            transform: rotate(-45deg);
-            top: calc(50% - 13px + 9px);
-            left: calc(50% - 4px);
-        }
-
-        &:after
-        {
-            transform: rotate(45deg);
-            top: calc(50% - 13px - 9px);
-            left: calc(50% - 4px);
-        }
-    }
-
-    &_nextbutton
-    {
-        margin-left: 20px;
-
-        &:before
-        {
-            transform: rotate(45deg);
-            top: calc(50% - 13px + 9px);
-            right: calc(50% - 4px);
-        }
-
-        &:after
-        {
-            transform: rotate(-45deg);
-            top: calc(50% - 13px - 9px);
-            right: calc(50% - 4px);
-        }
-    }
-
-    &_container
-    {
-        width: 90%;
-        height: 90%;
-        @include flex-col(center, center);
-
-        &_picture
-        {
-            width: 100%;
-            height: 100%;
-            
-            & *
-            {
-                width: 100%;
-                height: 100%;
-                object-fit: contain;
-            }
-        }
-
-        &_title
-        {
-            margin-top: 20px;
-            margin-bottom: 0px;
-            color: $primary-color;
-        }
-    }
-}
-
 
 // --------- BOTTOM BAR ---------
 
@@ -588,10 +479,10 @@
     }
     position: fixed;
     bottom: 0px;
-    right: 60px;
+    right: 0px;
     @include media-under("desktop-max")
     {
-        position: static;
+        // position: static;
     }
     @include flex-row(space-between, center);
     background-color: $tertiary-color;
@@ -738,4 +629,31 @@
 
     padding-bottom: 0;
     margin-bottom: -20px;
+}
+.header {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 100%;
+
+&__help-nav {
+        @include sr-only
+}
+&__logo {
+      
+      
+   
+}}
+.footer
+{
+    padding: 30px;
+    
+    &--photographerpage
+    {
+        @include media-under("desktop-max")
+        {
+            padding-bottom: 0px;
+            @include flex-row(flex-end, flex-end);
+        }
+    }
 }

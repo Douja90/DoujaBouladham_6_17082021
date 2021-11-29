@@ -62,9 +62,8 @@ body {
 .content {
 
     &__header {
-        margin-top: -50px;
-        
-        margin-right: 10px;
+        margin-top: -10px; 
+        margin-right: 0;
         padding-bottom: 30px;
         padding-top: 30px;
     }
@@ -73,9 +72,10 @@ body {
         font-weight: 300;
         font-size: 1.6em;
         color: $color-primary;
-        // margin-right: 10%;
-        // margin-top: -50px;
-        // margin-bottom: 4%;
+        margin-right: 5%;
+        margin-top: -50px;
+        margin-bottom: 4%;
+        
         
     }
     &__photographer__profile {
@@ -243,3 +243,23 @@ $breakpoints:
     "largedesktop-min": 1440px
 );
 
+a, a:visited
+{
+    color: inherit;
+    text-decoration: none;
+}
+
+html
+{
+    min-height: 100%;
+    @include flex-row(center, center);
+}
+
+body
+{
+                                  /* To remove the blank space under footer */
+    @include flex-col(space-between, stretch);
+    margin: 0px;
+    max-width: 1440px;
+    width: 100%;
+}

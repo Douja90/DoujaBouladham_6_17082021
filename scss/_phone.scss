@@ -2,7 +2,7 @@
     .content {
         h1 {
                 margin-top: -25.5%;
-                margin-bottom: 37%;
+                margin-bottom: 30%;
         }
         &__photographer__profile {
             a {
@@ -15,7 +15,7 @@
     }
     .content__header{
         h1{
-            margin-top: -38%;
+            margin-top: -35%;
            margin-right: 2%;
             padding-right: 0%;
             font-size: 1.4em;
@@ -50,35 +50,38 @@
 // Header home page 
 
 .header {
-        display: flex;
-        flex-direction: column;
-        text-align: left;
-        width: 100%;
-    
+       
     &__help-nav {
             @include sr-only
     }
     &__logo {
         transform: scale(0.6);
-        margin-left: -18%;
+        
+        
+    // margin-left: -77%;
+    // margin-top: 30px;
+    // margin-bottom: 30px;
     }
     &__navigation {
-        margin-top: 14px;
-
+        margin-top: 20px;
+        
         ul {
             
                 flex-wrap: wrap;
-                justify-content: center;
-                row-gap: 10px;
+                justify-content: space-between;
+                row-gap: 8px;
+                // padding-top: 30px;
+                align-items: center;
+                margin-left: -42%;
                 padding: 0px 40px;
             }
         
     }
 }
 
-.header-photographer {
-        margin-left: 17%; 
-}
+// .header-photographer {
+//         margin-left: 17%; 
+// }
 
 .modal-contact {
     &__content {
