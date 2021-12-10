@@ -27,7 +27,7 @@ export default function createPhotographersDom(arr){
             <h4>${photograph.price}</h4>
             
             <div >
-                ${ photograph.tags.map((tags)=>{
+                ${photograph.tags.map((tags)=>{
                                 
                     return `  <div class="content__photographer__profile__tag" aria-label="Tags correspondants au profil du photographe">
                     <ul>

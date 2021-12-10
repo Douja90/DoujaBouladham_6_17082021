@@ -77,11 +77,12 @@
     background-color: $background-grey;
     @include media-under("tablet-max")
     {
-        padding: 30px;
+        padding: 40px;
+        margin: -10px;
     }
     @include media-under("mobile-max")
     {
-        margin: 0px;
+        margin: -10px;
         background-color: #FFFFFF;
     }
 
@@ -97,35 +98,43 @@
         {
             color: $secondary-color;
             transition: color 300ms;
-            margin: 2px;
+            // margin: 2px;
             font-size: 0.2rem;
+            @include media-under("mobile-max")
+            {
+              font-size: 0.1rem;
+              display: inline;
+            //   margin: -2px;
+            }
         }
 
         &_location
         {
             color: $primary-color;
-            margin: 2px;
+            margin-top: 10px;
         }
 
         &_description
         {
             color: $text-grey;
-            margin: 2px;
+            margin-top: 10px;
+            display: flex;
         }
 
         &_tags
         {
             @include flex-row(normal, center);
-            flex-wrap: wrap;
+            margin-top: 15px;
+            margin-right: 6px;
 
             & span    
             {
                 color: $primary-color;
                 border: 0.5px solid $border-grey;
                 border-radius: 12px;
-                margin: 3px;
-                padding-left: 6px;
-                padding-right: 6px;
+                // margin: 0px;
+                // padding-left: 6px;
+                // padding-right: 6px;
             }
         }
     }
@@ -174,6 +183,8 @@
     {
         width: 200px;
         height: 200px;
+        position: absolute;
+        right: 100px;
         @include media-between("tablet-min", "desktop-max")
         {
             width: 150px;
@@ -183,11 +194,12 @@
         {
             width: 115px;
             height: 115px;
-            margin-right: -40px;
+            margin-right: -60px;
+            margin-top: -20px;
             padding-right: 0;
         }
         object-fit: cover;
-        margin: 20px;
+        margin: 10px;
         border-radius: 100px;
         box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.25);
         transition: box-shadow 300ms;
@@ -235,6 +247,7 @@
 .gallery
 {
     padding: 30px;
+    margin-bottom: 100px;
     @include media-under("mobile-max")
     {
         padding: 20px;
@@ -482,7 +495,7 @@
     right: 0px;
     @include media-under("desktop-max")
     {
-        // position: static;
+    display: none
     }
     @include flex-row(space-between, center);
     background-color: $tertiary-color;
@@ -496,14 +509,19 @@
 
         &_number
         {
-            margin-right: 10px;
+            margin-right: 3px;
+            padding-left: 0;
         }
 
         &_heart
         {
             width: 18px;
+            margin-right: 5px;
         }
     }
+}
+.bottom_bar_price{
+    display: flex;
 }
 
 

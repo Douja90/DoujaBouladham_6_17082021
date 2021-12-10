@@ -87,12 +87,10 @@ body {
 
 .modal-contact__content h1 {
   font-weight: 300;
-  font-size: 2.3em;
   margin-top: 1%;
 }
 .modal-contact__content h2 {
   font-weight: 300;
-  font-size: 2.3em;
   margin-bottom: 4%;
   color: #000000;
 }
@@ -169,7 +167,7 @@ body {
   .header__logo {
     width: 125px;
     height: 40px;
-    margin-left: 0;
+    margin-left: -7px;
   }
 }
 .header__navigation {
@@ -627,12 +625,13 @@ body {
 }
 @media screen and (max-width: 1023px) {
   .presentation {
-    padding: 30px;
+    padding: 40px;
+    margin: -10px;
   }
 }
 @media screen and (max-width: 767px) {
   .presentation {
-    margin: 0px;
+    margin: -10px;
     background-color: #FFFFFF;
   }
 }
@@ -650,31 +649,35 @@ body {
 .presentation_photographer_name {
   color: #D3573C;
   transition: color 300ms;
-  margin: 2px;
   font-size: 0.2rem;
+}
+@media screen and (max-width: 767px) {
+  .presentation_photographer_name {
+    font-size: 0.1rem;
+    display: inline;
+  }
 }
 .presentation_photographer_location {
   color: #901C1C;
-  margin: 2px;
+  margin-top: 10px;
 }
 .presentation_photographer_description {
   color: #525252;
-  margin: 2px;
+  margin-top: 10px;
+  display: flex;
 }
 .presentation_photographer_tags {
   display: flex;
   flex-direction: row;
   justify-content: normal;
   align-items: center;
-  flex-wrap: wrap;
+  margin-top: 15px;
+  margin-right: 6px;
 }
 .presentation_photographer_tags span {
   color: #901C1C;
   border: 0.5px solid #C4C4C4;
   border-radius: 12px;
-  margin: 3px;
-  padding-left: 6px;
-  padding-right: 6px;
 }
 .presentation_contact {
   color: #FFFFFF;
@@ -714,8 +717,10 @@ body {
 .presentation_profilepicture {
   width: 200px;
   height: 200px;
+  position: absolute;
+  right: 100px;
   object-fit: cover;
-  margin: 20px;
+  margin: 10px;
   border-radius: 100px;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.25);
   transition: box-shadow 300ms;
@@ -730,7 +735,8 @@ body {
   .presentation_profilepicture {
     width: 115px;
     height: 115px;
-    margin-right: -40px;
+    margin-right: -60px;
+    margin-top: -20px;
     padding-right: 0;
   }
 }
@@ -768,6 +774,7 @@ body {
 
 .gallery {
   padding: 30px;
+  margin-bottom: 100px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -980,6 +987,11 @@ body {
     padding-right: 20px;
   }
 }
+@media screen and (max-width: 1439px) {
+  .bottom_bar {
+    display: none;
+  }
+}
 .bottom_bar_likes {
   display: flex;
   flex-direction: row;
@@ -987,10 +999,16 @@ body {
   align-items: center;
 }
 .bottom_bar_likes_number {
-  margin-right: 10px;
+  margin-right: 3px;
+  padding-left: 0;
 }
 .bottom_bar_likes_heart {
   width: 18px;
+  margin-right: 5px;
+}
+
+.bottom_bar_price {
+  display: flex;
 }
 
 .header-photographer {
@@ -1289,6 +1307,19 @@ body {
   border: none;
   border-radius: 3px;
 }
+@media screen and (max-width: 1023px) {
+  .contact_submit {
+    position: relative;
+    left: 30%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .contact_submit {
+    position: relative;
+    left: 25%;
+    width: 120px;
+  }
+}
 
 /* BASES */
 html, .sorting_select, #message {
@@ -1316,7 +1347,7 @@ body {
 }
 @media screen and (max-width: 1023px) {
   .presentation_photographer_name {
-    font-size: 36px;
+    font-size: 1.7rem;
   }
 }
 
@@ -1348,7 +1379,7 @@ body {
 }
 @media screen and (max-width: 1023px) {
   .presentation_photographer_description, .sorting, .sorting_select {
-    font-size: 12px;
+    font-size: 1rem;
   }
 }
 
@@ -1441,19 +1472,16 @@ html {
 }
 
 .footer {
-  padding: 30px;
+  padding: 10px;
+  z-index: 2;
 }
 @media screen and (max-width: 1439px) {
   .footer--photographerpage {
     padding-bottom: 0px;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: flex-end;
   }
 }
 
-/* BASES */
+/* LIGHTBOX */
 .lightbox_bg {
   background-color: rgba(255, 255, 255, 0.8);
   display: none;
@@ -1590,6 +1618,143 @@ html {
   margin-top: 20px;
   margin-bottom: 0px;
   color: #901C1C;
+}
+
+/* SORTING */
+.sorting {
+  width: 100%;
+  padding: 0px;
+  padding-top: 30px;
+  padding-bottom: 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+@media screen and (max-width: 767px) {
+  .sorting {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 0px;
+  }
+}
+.sorting label {
+  color: #000000;
+  margin-right: 30px;
+}
+.sorting_wrapper {
+  position: relative;
+}
+.sorting_input {
+  position: absolute;
+  left: 30px;
+}
+.sorting_button {
+  width: 135px;
+  height: 50px;
+  padding: 0px 10px;
+  border-radius: 5px;
+  background: #901C1C;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+@media screen and (max-width: 1023px) {
+  .sorting_button {
+    height: 40px;
+  }
+}
+.sorting_button_text {
+  padding: 0px 5px;
+  color: #FFFFFF;
+}
+.sorting_button_icon {
+  position: relative;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+}
+.sorting_button_icon:before, .sorting_button_icon:after {
+  width: 3px;
+  height: 10px;
+  border-radius: 1px;
+  background: #FFFFFF;
+  content: " ";
+  position: absolute;
+  top: 13px;
+  left: 20px;
+  z-index: 1;
+}
+.sorting_button_icon:before {
+  transform: translate(-5px, 0) rotate(-45deg);
+}
+.sorting_button_icon:after {
+  transform: translate(0, 0) rotate(45deg);
+}
+.sorting_menu {
+  width: 160px;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  border-radius: 5px;
+}
+.sorting_menu_list {
+  width: 140px;
+  margin: 0px;
+  padding: 0px 10px;
+  background: #901C1C;
+  transform: translateY(-100%);
+  list-style: none;
+  transition: all 100ms ease-in-out;
+}
+.sorting_menu li {
+  display: flex;
+  align-items: center;
+  width: inherit;
+  padding: 0;
+}
+.sorting_menu li > a {
+  display: flex;
+  align-items: center;
+  width: inherit;
+  height: 40px;
+  padding: 5px 10px;
+  color: #FFFFFF;
+  cursor: pointer;
+  transition: all 100ms ease-in-out;
+}
+@media screen and (max-width: 1023px) {
+  .sorting_menu li > a {
+    height: 30px;
+  }
+}
+.sorting_menu li:not(:last-child) {
+  border-bottom: 1px solid #FFFFFF;
+}
+.sorting_menu li > a:hover {
+  background: #D3573C;
+}
+
+.sorting_input:checked ~ .sorting_menu {
+  z-index: 1;
+}
+
+.sorting_input:checked ~ .sorting_menu ul {
+  transform: translateY(0);
+}
+
+.sorting_input:checked ~ .sorting_button .sorting_button_icon::before {
+  transform: translate(-5px, 0) rotate(45deg);
+  z-index: 2;
+}
+
+.sorting_input:checked ~ .sorting_button .sorting_button_icon::after {
+  transform: translate(0, 0) rotate(-45deg);
+  z-index: 2;
 }
 
 /*# sourceMappingURL=index.css.map */

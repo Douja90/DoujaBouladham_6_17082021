@@ -15,18 +15,17 @@ export default function createPhotographerPageDom(arr){
             photographerHTML += `
 
             <div class="presentation_photographer">
-            <a href="./photographer-page.html?id=${photograph.id}">
+            
             <h1 class="presentation_photographer_name">  ${photograph.name}</h1>
             <h2 class="presentation_photographer_location"> ${photograph.city}</h2>
             <h3 class="presentation_photographer_description">${photograph.tagline}</h3>
             <div class="presentation_photographer_tags">
-            ${ photograph.tags.map((tags)=>{
+            ${photograph.tags.map((tags)=>{
                                 
-                return `  <div class="content__photographer__profile__tag" aria-label="Tags correspondants au profil du photographe">
+                return `<div class="content__photographer__profile__tag" aria-label="Tags correspondants au profil du photographe">
                 <ul>
-                    <li class="header__navigation__item" >
-                        <a role="link" href="#">#${tags}</a>
-                    </li>
+                <a class="presentation_photographer_tags" role="link">#${tags}</a>  
+                </ul>    
         
         </div>  `
      

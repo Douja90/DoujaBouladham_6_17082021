@@ -27,7 +27,7 @@ body
     font-size: 64px;
     @include media-under("tablet-max")
     {
-        font-size: 36px;
+        font-size: 1.7rem;
     }
 }
 
@@ -67,7 +67,7 @@ body
     font-size: 18px;
     @include media-under("tablet-max")
     {
-        font-size: 12px;
+        font-size: 1rem;
     }
 }
 
@@ -165,25 +165,22 @@ html
     @include flex-row(center, center);
 }
 
-// body
-// {
-//     height: 100vh;                               /* To remove the blank space under footer */
-//     @include flex-col(space-between, stretch);
-//     margin: 0px;
-//     max-width: 1440px;
-//     width: 100%;
-// }
 
 .footer
 {
-    padding: 30px;
+    
+    padding: 10px;
+    z-index: 2;
     
     &--photographerpage
     {
+        // position: relative;
+        // bottom: 0%;
+        // right: 0%;
         @include media-under("desktop-max")
         {
             padding-bottom: 0px;
-            @include flex-row(flex-end, flex-end);
+            // @include flex-row(flex-end, flex-end);
         }
     }
 }

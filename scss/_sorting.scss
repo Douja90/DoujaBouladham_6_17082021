@@ -1,0 +1,165 @@
+// --------- SORTING ---------
+
+.sorting
+{
+    
+    width: 100%;
+    padding: 0px;
+    padding-top: 30px;
+    padding-bottom: 0px;
+    @include media-under("mobile-max")
+    {
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 0px;
+    }
+    @include flex-row(flex-start, center);
+
+    & label     // !!!!!!! METTRE EN GRAS
+    {
+        color: #000000;
+        margin-right: 30px;
+    }
+
+    &_wrapper
+    {
+        position: relative;
+    }
+
+    &_input
+    {
+        position: absolute;
+        left: 30px;
+    }
+
+    &_button
+    {
+        width: 135px;
+        height: 50px;
+        @include media-under("tablet-max")
+        {
+            height: 40px;
+        }
+        padding: 0px 10px;
+        border-radius: 5px;
+        background: $primary-color;
+        @include flex-row(space-between, center);
+        position: relative;
+
+        &_text
+        {
+            padding: 0px 5px;
+            color: #FFFFFF;
+        }
+    
+        &_icon
+        {
+            position: relative;
+            width: 35px;
+            height: 35px;
+            cursor: pointer;
+
+            &:before, &:after
+            {
+                width: 3px;
+                height: 10px;
+                border-radius: 1px;
+                background: #FFFFFF;
+                content: " ";
+                position: absolute;
+                top: 13px;
+                left: 20px;
+                z-index: 1;
+            }
+        
+            &:before
+            {
+                transform: translate(-5px, 0) rotate(-45deg);
+            }
+        
+            &:after
+            {
+                transform: translate(0, 0) rotate(45deg);
+            }
+        }
+    }
+
+    &_menu
+    {
+        width: 160px;
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        border-radius: 5px;
+
+        &_list
+        {
+            width: 140px;
+            margin: 0px;
+            padding: 0px 10px;
+            background: $primary-color;
+            transform: translateY(-100%);
+            list-style: none;
+            transition: all 100ms ease-in-out;
+        }
+
+        & li
+        {
+            display: flex;
+            align-items: center;
+            width: inherit;
+            padding: 0;
+        }
+
+        & li > a
+        {
+            display: flex;
+            align-items: center;
+            width: inherit;
+            height: 40px;
+            @include media-under("tablet-max")
+            {
+                height: 30px;
+            }
+            padding: 5px 10px;
+            color: #FFFFFF;
+            cursor: pointer;
+            transition: all 100ms ease-in-out;
+        }
+
+        & li:not(:last-child)
+        {
+            border-bottom: 1px solid #FFFFFF;
+        }
+
+        & li > a:hover
+        {
+            background: $secondary-color;
+        }
+    }
+}
+
+.sorting_input:checked ~ .sorting_menu
+{
+    z-index: 1;
+}
+
+.sorting_input:checked ~ .sorting_menu ul
+{
+    transform: translateY(0);
+}
+
+.sorting_input:checked ~ .sorting_button .sorting_button_icon::before
+{
+    transform: translate(-5px, 0) rotate(45deg);
+    z-index: 2;
+}
+
+.sorting_input:checked ~ .sorting_button .sorting_button_icon::after
+{
+    transform: translate(0, 0) rotate(-45deg);
+    z-index: 2;
+}
+
