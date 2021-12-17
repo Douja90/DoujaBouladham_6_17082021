@@ -2,20 +2,19 @@
 
 .sorting
 {
-    
     width: 100%;
-    padding: 0px;
-    padding-top: 30px;
-    padding-bottom: 0px;
+    padding-left: 45px;
+    padding-top: 50px;
+    padding-bottom: 10px;
     @include media-under("mobile-max")
     {
         padding-left: 30px;
         padding-right: 30px;
-        padding-top: 0px;
+        padding-top: 20px;
     }
     @include flex-row(flex-start, center);
 
-    & label     // !!!!!!! METTRE EN GRAS
+    & label 
     {
         color: #000000;
         margin-right: 30px;
@@ -29,7 +28,7 @@
     &_input
     {
         position: absolute;
-        left: 30px;
+        left: 50px;
     }
 
     &_button
