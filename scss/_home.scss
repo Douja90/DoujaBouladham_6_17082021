@@ -1,27 +1,12 @@
-// Header home page 
 
 .header {
     width: 100%;
     display: flex;
-    // justify-content: space-evenly;
     margin-top: 5%;
    
-    &__help-nav {
-        position: fixed;
-        z-index: 1;
-        top: 0px;
-        left: 45%;
-        text-decoration: none;
-        // padding: 3px 14px;
-        border-radius: 5px;
-        color: black;
-        font-weight: 700;
-        font-size: 0.8em;
-        background-color: $color-secondary;
-       
-    }
+   
     &__logo {
-        margin-left: 5px;
+        margin-left: -5px;
         padding-left: 5%;
         margin-top: -5px;
 
@@ -35,11 +20,8 @@
             width: 125px;
             height: 40px;
             margin-left: -7px;
-
-            // padding: 25px;
-        }
-
-      
+            transform: scale(0.6);
+        }  
     }
     &__navigation {
         margin-top: -3%;
@@ -47,20 +29,33 @@
         @include media-under("tablet-max")
     {
         
-        // top: 40%;
         align-items: center;
     }
     @include media-under("mobile-max")
     {
-        margin-top: -40px;
-        // top: 40%;
+        margin-top: 20px;
         align-items: center;
     }
         ul {
             display: flex;
             flex-wrap: wrap;
-            column-gap: 0px;
-            list-style-type: none; 
+            column-gap: 5px;
+            list-style-type: none;
+            @include media-between("mobile-max", "tablet-min")
+            {
+                align-items: center;
+                margin-top: 40px;
+                margin-bottom: 40px;
+            }
+            @include media-under("mobile-max")
+            {
+                flex-wrap: wrap;
+                justify-content: space-between;
+                row-gap: 2px;
+                align-items: center;
+                margin-left: -42%;
+                padding: 0px 15px;
+            }
         }
         a {
             
@@ -80,111 +75,6 @@
     }
 }
 
-.header-photographer {
-    margin-left: 4.5%;
-    margin-top: 2%;
-    margin-bottom: 3.5%;
-    svg {
-        transform: scale(1.3);
-  
-}
-
-.modal-contact {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    overflow: auto;
-    background-color: $color-background-modal;
-    &__content {
-        margin: 5% auto;
-        width: 100%;
-        max-width: 450px;
-        animation-name: modalopen;
-        animation-duration: 300;
-        background: $color-secondary;
-        border-radius: 5px;
-        overflow: hidden;
-        position: relative;
-        color: $color-black;
-         
-      
-        &__body {
-            padding: 1% 3% 4% 3%;
-          
-        }
-        &__close {
-            position: absolute;
-            right: 15px;
-            top: 16px;
-            width: 32px;
-            height: 32px;
-            opacity: 1;
-            cursor: pointer;
-            transform: scale(0.9);
-          
-            &::before, &::after {
-                position: absolute;
-                left: 15px;
-                content: " ";
-                height: 33px;
-                width: 3px;
-                background-color: #fff;
-            }
-            &::before {
-                transform: rotate(45deg);
-            }
-            &::after {
-                transform: rotate(-45deg);
-            }
-        }
-    } 
-}
-
-.formData {
-    label {
-        font-size: 1.3em;
-        font-weight: 300;
-    }
-    input {
-        border: 0.8px solid $color-background-modal;
-        border-radius: 5px;
-        outline: none;
-        margin-bottom: 2%;
-      
-        &:hover {
-            border: 0.8px solid $color-primary;
-        }
-    }
-}
-
-#message {
-    height: 180px;
-    outline: none;
-    border: none;
-}
-
-.text-control {
-    margin: 0;
-    padding: 8px;
-    width: 100%;
-    border-radius: 5px;
-    font-size: 1.1em;
-    height: 48px;
-}
-
-.btn-submit {
-    @include button-static;
-    margin-top: 2%;
-    border: none;
-    padding: 12px 24px;
-   
-}
-}
-
 .photographers_button
 {
     position: absolute;
@@ -201,8 +91,185 @@
         display: none;
     }
 }
+.content {
 
+    &__header {
+        margin-top: -10px; 
+        margin-right: 0;
+        padding-bottom: 30px;
+        padding-top: 30px;
+      
+    }
+    h1 {
+        text-align: right;
+        font-weight: 300;
+        font-size: 1.6em;
+        color: $color-primary;
+        margin-right: 5%;
+        margin-top: -50px;
+        margin-bottom: 4%;
+        @include media-under("mobile-max")
+        {
+        margin-bottom: 30%;
+        margin-top: -35%;
+        margin-right: 2%;
+         padding-right: 0%;
+         font-size: 1.3em; 
+        }
+        @include media-between("mobile-min", "tablet-max"){
+        margin-top: -180px;
+        font-size: 1.9rem;
+        }
+        
+    }
+    &__photographer__profile {
 
-.content__header__title{
-
+        padding-bottom: 15px;
+        margin: 10px;
+        a {
+            text-decoration: none;
+            @include media-under("mobile-max")
+            {
+            text-decoration: none;
+            }
+        }
+        h2 {
+            font-weight: 300;
+            font-size: 2.3em;
+            color: $color-secondary;
+            margin-top: 3%;
+            @include media-under("mobile-max")
+            {
+            font-size: 1.8em;
+            }  
+        }
+        h3 {
+            font-weight: 300;
+            font-size: 0.85em;
+            margin: 1%;
+            color: $color-primary;
+        }
+        p {
+            font-size: 0.8em;
+            font-weight: 500;
+        }
+        h4 {
+            font-weight: 300;
+            font-size: 0.7em;
+            margin: 1%;
+        }
+    }
+    &__photographer__profile__tag {
+        display: inline-flex;
+    }
 }
+
+.content-photographer {
+    h2 {
+        font-size: 2.6em;
+        font-weight: 300;
+        color: $color-secondary;
+      
+    }
+    h3 {
+        font-weight: 300;
+        font-size: 1.2em;
+        color: $color-primary;
+        margin: 4% 0%;
+    }
+    p {
+        font-size: 0.8em;
+        margin: 4% 0%;
+    }
+    h4 {
+        font-size: 0.9em;
+    }
+    h5 {
+        font-size: 1.1em;
+        font-weight: 300;
+        color: $color-primary;
+    }
+}
+.photographers__home{
+    display: flex;
+    flex: 30%;
+    flex-wrap: wrap;
+    margin: 0;
+    
+}
+.content__photographer {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 60px;
+    margin-top: 6%;
+    margin-bottom: 6%;
+    @include media-under("mobile-max"){
+        margin-top: 10%;
+        padding-top: 20px;
+        display: flex;
+        flex-direction: column;
+
+        &__profile {
+                flex: 100%;
+            }  
+        h2 {
+                font-size: 1.6em;
+            } 
+    }
+    &__profile {
+        flex: 33%;
+        text-align: center;
+       
+        img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            object-position: top;
+            clip-path: ellipse(50% 50%);
+        }
+        &__tag 
+            
+            ul {
+            display: flex;
+            flex-direction: column;
+            column-gap: 5px;
+            justify-content: center;
+            list-style-type: none;
+            margin-top: 3%;
+            a {
+                @include button-tag;
+            }
+            .sr-only {
+                @include sr-only
+            }
+            li{
+                display: flex;
+                flex-direction: column;
+                column-gap: 5px;
+                justify-content: center;
+                list-style-type: none;
+                margin-top: 3%; 
+            }
+        }
+    }
+    &__contact {
+        margin-left: -40%;
+        margin-top: 1%;
+        a {
+            @include button-static;
+        
+        }
+    }
+    &__photo {
+        img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            clip-path: ellipse(50% 50%);
+           
+        }
+    }
+}
+
+
+
