@@ -1,4 +1,4 @@
-html, .sorting_select, #message
+html
 {
     font-family: "DM Sans", sans-serif;
     font-weight: 400;
@@ -14,13 +14,6 @@ body
     margin: 0px;
     padding: 0px;
   } 
-
-// h1
-
-.photographer_card_name
-{
-    font-size: 36px;
-}
 
 .presentation_photographer_name
 {
@@ -39,38 +32,6 @@ body
     }
 }
 
-// h2
-
-.photographer_card_location
-{
-    font-size: 14px;
-}
-
-.presentation_photographer_location, .gallery_element_legend_title, .bottom_bar h2
-{
-    font-size: 24px;
-    @include media-under("tablet-max")
-    {
-        font-size: 18px;
-    }
-}
-
-// h3
-
-.photographer_card_description
-{
-    font-size: 12px;
-}
-
-.presentation_photographer_description, .sorting, .sorting_select
-{
-    font-size: 18px;
-    @include media-under("tablet-max")
-    {
-        font-size: 1rem;
-    }
-}
-
 .presentation_contact h3
 {
     font-size: 18px;
@@ -80,108 +41,4 @@ body
     }
 }
 
-// h4
-
-.photographer_card_price
-{
-    font-size: 10px;
-}
-
-// Others
-
-.photographer_card_tags, nav
-{
-    font-size: 13px;
-}
-
-.presentation_photographer_tags
-{
-    font-size: 18px;
-    @include media-under("tablet-max")
-    {
-        font-size: 12px;
-    }
-}
-
-.gallery_element_legend_likes_number
-{
-    font-size: 22px;
-    @include media-under("tablet-max")
-    {
-        font-size: 18px;
-    }
-}
-
-.contact_text p
-{
-    font-size: 56px;
-    @include media-under("tablet-max")
-    {
-        font-size: 36px;
-    }
-}
-
-.contact_form_label
-{
-    font-size: 26px;
-    @include media-under("tablet-max")
-    {
-        font-size: 18px;
-    }
-}
-
-.error-input
-{
-    font-size: 22px;
-    @include media-under("tablet-max")
-    {
-        font-size: 16px;
-    }
-}
-
-.contact_submit
-{
-    font-size: 16px;
-    @include media-under("tablet-max")
-    {
-        font-size: 14px;
-    }
-}
-
-.sorting label
-{
-    font-weight: 500;
-}
-
-a, a:visited
-{
-    color: inherit;
-    text-decoration: none;
-}
-
-html
-{
-    min-height: 100%;
-    @include flex-row(center, center);
-}
-
-
-.footer
-{
-    
-    padding: 10px;
-    z-index: 2;
-    
-    &--photographerpage
-    {
-        // position: relative;
-        // bottom: 0%;
-        // right: 0%;
-        @include media-under("desktop-max")
-        {
-            padding-bottom: 0px;
-            // @include flex-row(flex-end, flex-end);
-        }
-    }
-}
 
