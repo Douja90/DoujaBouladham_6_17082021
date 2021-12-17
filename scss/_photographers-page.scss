@@ -4,7 +4,6 @@
     {
         width: 250px;
         height: 70px;
-        // padding: 50px;
         margin-left: -50%;
         padding-left: 0;
 
@@ -17,7 +16,6 @@
         {
             width: 125px;
             height: 40px;
-            // padding: 25px;
         }
 
         &--photographerpage
@@ -35,7 +33,7 @@
     @include flex-row(center, center);
     @include media-under("mobile-max")
     {
-        width: 90%;
+        width: 100%;
         align-self: center;
         flex-wrap: wrap;
     }
@@ -72,13 +70,14 @@
 {
     margin-left: 50px;
     margin-right: 50px;
+    margin-top: 30px;
     padding: 50px;
     @include flex-row(space-between, stretch);
     background-color: $background-grey;
     @include media-under("tablet-max")
     {
-        padding: 40px;
-        margin: -10px;
+        padding: 30px;
+        margin: 10px;
     }
     @include media-under("mobile-max")
     {
@@ -207,40 +206,6 @@
 }
 
 
-// --------- SORTING ---------
-
-.sorting
-{
-    width: 100%;
-    padding: 50px;
-    padding-top: 30px;
-    padding-bottom: 0px;
-    @include media-under("mobile-max")
-    {
-        padding-left: 30px;
-        padding-right: 30px;
-        padding-top: 0px;
-    }
-    @include flex-row(flex-start, center);
-
-    & label     // !!!!!!! METTRE EN GRAS
-    {
-        color: #000000;
-        margin-right: 30px;
-    }
-
-    &_select
-    {
-        height: 50px;
-        padding: 10px;
-        border: none;
-        border-radius: 5px;
-        background-color: $primary-color;
-        color: #FFFFFF;
-        cursor: pointer;
-    }
-}
-
 
 // --------- GALLERY ---------
 
@@ -258,10 +223,10 @@
     &_element
     {
         padding: 20px;
-        width: 350px;
+        width: 450px;
         @include media-between("tablet-min", "desktop-max")
         {
-            width: 44%;
+            width: 50%;
         }
         @include media-under("mobile-max")
         {
@@ -657,14 +622,12 @@
 &__help-nav {
         @include sr-only
 }
-&__logo {
-      
-      
-   
-}}
+}
 .footer
 {
     padding: 30px;
+    padding: 10px;
+    z-index: 2;
     
     &--photographerpage
     {
@@ -675,3 +638,4 @@
         }
     }
 }
+
