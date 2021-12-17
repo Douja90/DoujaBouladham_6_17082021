@@ -34,9 +34,9 @@ export default function mediasFactory(media){
  
        return `
        
-          <video class= "gallery_element_picture" controls>
+          <video class= "gallery_element_picture">
               
-               <source src= ../images/medias/ ${video} type="video/mp4" alt=${alt}>
+               <source src= ../images/medias/${video} type="video/mp4" alt=${alt}>
           
           </video>
         `;
