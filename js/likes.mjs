@@ -2,6 +2,7 @@ import filterPhotographerById from "./filterPhotographers.mjs";
 
 const {medias, infos} = filterPhotographerById();
 
+export default function likes(){
 //Element du DOM
 const bottomBarLikesNumber = document.querySelector(".bottom_bar_likes_number");
 
@@ -42,4 +43,4 @@ function listenToHeartsEvents() {
 
 listenToHeartsEvents();
 
-
+}

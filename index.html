@@ -8,21 +8,20 @@
     <meta name="author" content="Fisheye">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <link rel="stylesheet" href="index.css">
-    <link rel="shortcut icon" src="./images/icons/icons8-appareil-photo-24" type="image/x-icon" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="shortcut icon" href="./images/icons/icons8-appareil-photo-24" type="image/x-icon" />
     <link class="camera-icon" rel="icon" type="image/png" href="images/icons/camera-solid.svg" />
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <title>FishEye</title>
   </head>
   <body>
     <div id="bloc-page">
-      <header class="header" role="banner" id="header-banner">
-          <a id="link-content" role="link" aria-hidden="true" aria-label="Aide à la navigation" href="#photographer" class="header__help-nav">Passer au contenu</a>
-          <a role="link" alt="FishEye Home page" aria-label="FishEye page d'accueil" href="index.html" class="header__logo">
-              <svg role="img" alt="Logo de FishEye" xmlns="http://www.w3.org/2000/svg" width="200" height="50" viewBox="0 0 200 50" fill="none" aria-describedby="title-logo description-logo">
+      <header class="header" id="header-banner">
+          <a id="link-content" aria-hidden="true" aria-label="Aide à la navigation" href="#photographer" class="header__help-nav">Passer au contenu</a>
+          <a aria-label="FishEye page d'accueil" href="index.html" class="header__logo">
+              <svg role="img" xmlns="http://www.w3.org/2000/svg" width="200" height="50" viewBox="0 0 200 50" fill="none" aria-describedby="title-logo description-logo">
                   <title id="title-logo">FishEye</title>
                   <desc id="description-logo">Le logo de FishEye</desc>
                   <path d="M24.7206 0.911621V6.51058H6.31164V17.5783H21.4333V22.9168H6.31164V39.1929H0V0.911621H24.7206Z" fill="#911C1C"/>
@@ -35,47 +34,43 @@
               </svg>
           </a>
           <a class="photographers_button" href="#photographers">Passer au contenu</a>
-          <nav role="navigation" class="header__navigation" aria-label="photographer categories">
+          <nav class="header__navigation" aria-label="photographer categories">
               <ul id="tags">
                   <li class="header__navigation__item" data-tag ="Portrait" id="item-portrait">
-                      <a role="link" data-tag ="Portrait" href="#">#Portrait</a>
+                      <a  data-tag ="Portrait" href="#">#Portrait</a>
                   </li>
                   <li class="header__navigation__item" data-tag ="art" id="item-art">
-                      <a role="link" data-tag ="Art" href="#">#Art</a>
+                      <a  data-tag ="Art" href="#">#Art</a>
                   </li>
                   <li class="header__navigation__item" data-tag ="fashion" id="item-fashion">
-                      <a role="link"  data-tag ="Fashion" href="#">#Fashion</a>
+                      <a   data-tag ="Fashion" href="#">#Fashion</a>
                   </li>
                   <li class="header__navigation__item" data-tag ="architecture" id="item-architecture">
-                      <a role="link" data-tag ="Architecture" href="#">#Architecture</a>
+                      <a  data-tag ="Architecture" href="#">#Architecture</a>
                   </li>
                   <li class="header__navigation__item" data-tag ="travel" id="item-travel">
-                      <a role="link" data-tag ="Travel" href="#">#Travel</a>
+                      <a  data-tag ="Travel" href="#">#Travel</a>
                   </li>
                   <li class="header__navigation__item" data-tag ="sport" id="item-sport">
-                      <a role="link" data-tag ="Sport" href="#">#Sport</a>
+                      <a  data-tag ="Sport" href="#">#Sport</a>
                   </li>
                   <li class="header__navigation__item" data-tag ="animals" id="item-animals">
-                      <a role="link" data-tag ="Animals" href="#">#Animals</a>
+                      <a  data-tag ="Animals" href="#">#Animals</a>
                   </li>
                   <li class="header__navigation__item" data-tag ="events" id="item-events">
-                      <a role="link" data-tag ="Events" href="#">#Events</a>
+                      <a  data-tag ="Events" href="#">#Events</a>
                   </li>
               </ul>
           </nav>
       </header>
        <!-- MAIN CONTENT -->
       <main class="content" id="photographer" data-id ="id" >
-          <section class="content__header">
+         <section class="content__header">
               <h1 class="content__header__title">Nos photographes</h1>
-         
-      <section  class="content__photographer"
-        id="photographers"
-        aria-label="Lise des photographers"
-      ></section>
+         </section>
+         <section  class="content__photographer" id="photographers" aria-label="Lise des photographers"></section>
     </main>
       
-    </section>
   </div>
   
   <script src="/js/index.js" type="module"></script>

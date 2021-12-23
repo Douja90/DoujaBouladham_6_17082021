@@ -1,8 +1,9 @@
 import filterPhotographerById from "./filterPhotographers.mjs";
 import createPhotographerPageDom from "./createPhotographersPageNode.mjs";
 import createMediasPageDom from "./createMediasNode.mjs";
-import photogaphersData from "./photographers.mjs";
-
+import lightbox from "./lightbox.mjs";
+import likes from "./likes.mjs";
+import modal from "./modal.mjs"
 
 // 'Destructuring assignment' pour les deux constantes infos et medias (filtrer selon l'id)
 const {infos, medias} = filterPhotographerById();
@@ -32,7 +33,11 @@ function createInfoModal(name){
    
 }
 
-textContact.innerHTML = createInfoModal(infos[0].name);       
+textContact.innerHTML = createInfoModal(infos[0].name);  
+
+lightbox();
+likes();
+modal();
 
 
 

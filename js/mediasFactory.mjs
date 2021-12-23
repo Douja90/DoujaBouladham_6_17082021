@@ -23,20 +23,18 @@ export default function mediasFactory(media){
  function createImage(image, alt){
  
       return `
-        <img class="gallery_element_picture" src= ../images/medias/${image}  alt="${alt}" /> 
+        <img class="gallery_element_picture" src=../medias/${image} type="image/jpg" alt="${alt}" /> 
       `;
- 
  
  }
  
  function createVideo(video, alt){
  
- 
        return `
        
-          <video class= "gallery_element_picture" controls>
+          <video class= "gallery_element_video">
               
-               <source src= ../images/medias/ ${video} type="video/mp4" alt=${alt}>
+               <source src=../medias/${video} type="video/mp4" alt=${alt}>
           
           </video>
         `;

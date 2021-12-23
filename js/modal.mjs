@@ -1,6 +1,10 @@
 // ============================== FONCTIONS ==============================
+/** 
+     * Cette fonction qui créée la modal
+     * @return {html} 
+    */
 
-
+export default function modal(){
 /**
  * lancer la modal
  */
@@ -161,4 +165,4 @@ setTimeout(function() {
 }, 500);
 
 
-
+}

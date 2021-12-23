@@ -9,109 +9,159 @@ import photographersData from "./photographers.mjs";
      * @return {html} 
 
     */
+export default function lightbox(mediasList, media){ 
 
+    
 // Elements du DOM lightbox
 const lighboxBg = document.querySelector('.lightbox_bg');
 
-const lightboxmedias = document.querySelectorAll(".gallery_element_picture");
+const lightboxmedias = document.querySelectorAll(".gallery_element_picture" ,".gallery_element_picture");
 
-const lighboxContent = document.querySelector('.lightbox_container_media');
+const lighboxContent = document.querySelectorAll('.lightbox_container_media');
 
-const lightboxClose = document.querySelector('.lightbox_close');
-
-const {infos, medias} = filterPhotographerById();
-
- // Ouvrire la lightbox
-function openLightbox() {
-    // lighboxBg.classList.add('active') ;
-    lighboxBg.style.display = 'block';
-    }
-    // Férmer la lightbox
-function closeLightbox() {
-     lighboxBg.style.display = 'none';
-        }; 
-
-
-//******************************EVENTS******************************* */  
-
-// Ouvrir la modale lightbox  
-
-let actualMediaId = photographersData.media.id;
-lightboxmedias.forEach(function(media) {
-    
-    media.addEventListener("click", () => {
-        // let actualIndex = medias[0].id + medias[0].alt;
-       
-        const actualIndex = medias.findIndex((element)=>{
-            console.log(element.id);
-            return element.id;
-            
-        });
-        // console.log(medias[actualIndex].id);
-       openLightbox();
-    //    lighboxContent.innerHTML = mediasFactory(actualIndex);
-    lighboxContent.innerHTML = mediasFactory(medias[actualIndex]);
-    return actualMediaId = medias[actualIndex].id;
-        
-
-});
-});
-
-//Férmer la lightbox avec le bouton close
-lightboxClose.addEventListener("click", () =>{
-        closeLightbox();
-    });
-
-
-    // Le media actuel qui est dans la lightbox
- 
-    //La lightbox est creee
-  
+const lightboxClose = document.querySelector('.lightbox_close'); 
 
   const next = document.querySelector(".lightbox_next");
 
  const previous = document.querySelector(".lightbox_back");
 
+const {infos, medias} = filterPhotographerById();
+
+mediasList = medias;
+
+
+
+// Ouvrir la modale lightbox  
+
+lightboxmedias.forEach(function(media) {
+ 
+    media.addEventListener("click", () => {
+        lighboxBg.style.display = 'block';
+        console.log(mediasFactory(media));
+        lighboxContent.innerHTML = mediasFactory(media);
+    
+});
+});
 
 next.addEventListener("click", ()=>{
-  
-      // Premierement il faut determinet l'index du media actuel dans la lightbox
-  
-      const actualIndex = medias.findIndex((element)=>{
+    
+// Premierement il faut determinet l'index du media actuel dans la lightbox
+    
+    const actualIndex = medias.findIndex((element)=>{
+      
+        return element.id;
+      
+    });
+
+    if(actualIndex !== medias.length){
         
-          return element.id === actualMediaId;
+        lighboxContent.innerHTML = mediasFactory(medias[actualIndex + 1]);
+         console.log(mediasFactory(medias[actualIndex + 1]));
+         return  medias[actualIndex + 1].id;
+      
+    }
+
+});
+//Férmer la lightbox avec le bouton close
+
+lightboxClose.addEventListener("click", () =>{
+    lighboxBg.style.display = 'none';;
+    });
+
+}
+
+
+
+//  // Ouvrire la lightbox
+// function openLightbox() {
+//     // lighboxBg.classList.add('active') ;
+//     lighboxBg.style.display = 'block';
+//     }
+//     // Férmer la lightbox
+// function closeLightbox() {
+//      lighboxBg.style.display = 'none';
+//         }; 
+
+
+// //******************************EVENTS******************************* */  
+
+// // Ouvrir la modale lightbox  
+
+// let actualMediaId = photographersData.media.id;
+// lightboxmedias.forEach(function(media) {
+    
+//     media.addEventListener("click", () => {
+//         // let actualIndex = medias[0].id + medias[0].alt;
+       
+//         const actualIndex = medias.findIndex((element)=>{
+//             console.log(element.id);
+//             return element.id;
+            
+//         });
+//         // console.log(medias[actualIndex].id);
+//        openLightbox();
+//     lighboxContent.innerHTML = mediasFactory(medias[actualIndex].element.id);
+//     return actualMediaId = medias[actualIndex].id;
         
-      });
+
+// });
+// });
+
+// //Férmer la lightbox avec le bouton close
+// lightboxClose.addEventListener("click", () =>{
+//         closeLightbox();
+//     });
+
+
+//     // Le media actuel qui est dans la lightbox
+ 
+//     //La lightbox est creee
   
-      if(actualIndex !== medias.length){
+
+//   const next = document.querySelector(".lightbox_next");
+
+//  const previous = document.querySelector(".lightbox_back");
+
+
+// next.addEventListener("click", ()=>{
+  
+//       // Premierement il faut determinet l'index du media actuel dans la lightbox
+  
+//       const actualIndex = medias.findIndex((element)=>{
         
-          lighboxContent.innerHTML = mediasFactory(medias[actualIndex + 1]);
-           return actualMediaId = medias[actualIndex + 1].id;
+//           return element.id === actualMediaId;
+        
+//       });
+  
+//       if(actualIndex !== medias.length){
+        
+//           lighboxContent.innerHTML = mediasFactory(medias[actualIndex + 1]);
+//            return actualMediaId = medias[actualIndex + 1].id;
            
         
-      }
+//       }
   
-});
+// });
 
 
-previous.addEventListener("click", ()=>{
+// previous.addEventListener("click", ()=>{
   
-      const actualIndex = medias.findIndex((element)=>{
+//       const actualIndex = medias.findIndex((element)=>{
         
-          return element.id === actualMediaId;
+//           return element.id === actualMediaId;
         
-      });
+//       });
   
-     if(actualIndex !== 0){
+//      if(actualIndex !== 0){
        
-        lighboxContent.innerHTML = mediasFactory(medias[actualIndex - 1]);
+//         lighboxContent.innerHTML = mediasFactory(medias[actualIndex - 1]);
         
-           return actualMediaId = medias[actualIndex - 1].id;
+//            return actualMediaId = medias[actualIndex - 1].id;
         
        
-     }
+//      }
   
-});
+// });
 
 
 
