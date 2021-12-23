@@ -32,9 +32,15 @@ export default function mediasFactory(media){
  
        return `
        
+<<<<<<< HEAD
           <video class= "gallery_element_video">
               
                <source src=../medias/${video} type="video/mp4" alt=${alt}>
+=======
+          <video class= "gallery_element_picture">
+              
+               <source src= ../images/medias/${video} type="video/mp4" alt=${alt}>
+>>>>>>> d19e098a21c8d2055f918bc6e9e510c504296121
           
           </video>
         `;
