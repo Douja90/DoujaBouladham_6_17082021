@@ -68,6 +68,12 @@
                 background-color: $border-grey;
             }
         }
+        button{
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+            
+        }
     }
 
     &_close

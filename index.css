@@ -28,7 +28,7 @@ a, a:visited {
   margin-top: 5%;
 }
 .header__logo {
-  margin-left: -5px;
+  margin-left: -20px;
   padding-left: 5%;
   margin-top: -5px;
 }
@@ -41,7 +41,7 @@ a, a:visited {
   .header__logo {
     width: 125px;
     height: 40px;
-    margin-left: -7px;
+    margin-left: -14px;
     transform: scale(0.6);
   }
 }
@@ -159,7 +159,7 @@ a, a:visited {
     font-size: 1.3em;
   }
 }
-@media screen and (min-width: ) and (max-width: 1023px) {
+@media screen and (min-width: 767px) and (max-width: 1023px) {
   .content h1 {
     margin-top: -180px;
     font-size: 1.9rem;
@@ -566,6 +566,26 @@ a, a:visited {
   transform: scale(1.04);
 }
 .gallery_element_picture * {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+.gallery_element_picture_video {
+  width: 100%;
+  height: 300px;
+  transition: all 300ms;
+  cursor: pointer;
+}
+@media screen and (max-width: 767px) {
+  .gallery_element_picture_video {
+    height: 190px;
+  }
+}
+.gallery_element_picture_video:hover {
+  transform: scale(1.04);
+}
+.gallery_element_picture_video * {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -983,13 +1003,15 @@ a, a:visited {
   height: 17px;
   color: #ffffff;
   cursor: pointer;
+  border: none;
+  background-color: transparent;
 }
 .contact_close:before, .contact_close:after {
+  border: transparent;
   position: absolute;
   width: 3px;
   height: 30px;
   content: " ";
-  background-color: #FFFFFF;
 }
 .contact_close:before {
   transform: rotate(45deg);
@@ -1187,6 +1209,11 @@ body {
 .lightbox_content.boundary_lastelement .lightbox_next:before, .lightbox_content.boundary_lastelement .lightbox_next:after {
   background-color: #C4C4C4;
 }
+.lightbox_content button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
 .lightbox_close {
   position: fixed;
   top: 10px;
@@ -1282,9 +1309,7 @@ body {
 }
 @media screen and (max-width: 767px) {
   .sorting {
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-top: 20px;
+    display: none;
   }
 }
 .sorting label {
