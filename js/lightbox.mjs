@@ -15,7 +15,7 @@ export default function lightbox(mediasList, media){
 // Elements du DOM lightbox
 const lighboxBg = document.querySelector('.lightbox_bg');
 
-const lightboxmedias = document.querySelectorAll(".gallery_element_picture" ,".gallery_element_picture");
+const lightboxmedias = document.querySelectorAll(".gallery_element_picture");
 
 const lighboxContent = document.querySelectorAll('.lightbox_container_media');
 
@@ -37,31 +37,13 @@ lightboxmedias.forEach(function(media) {
  
     media.addEventListener("click", () => {
         lighboxBg.style.display = 'block';
-        console.log(mediasFactory(media));
+        
         lighboxContent.innerHTML = mediasFactory(media);
     
 });
 });
 
-next.addEventListener("click", ()=>{
-    
-// Premierement il faut determinet l'index du media actuel dans la lightbox
-    
-    const actualIndex = medias.findIndex((element)=>{
-      
-        return element.id;
-      
-    });
 
-    if(actualIndex !== medias.length){
-        
-        lighboxContent.innerHTML = mediasFactory(medias[actualIndex + 1]);
-         console.log(mediasFactory(medias[actualIndex + 1]));
-         return  medias[actualIndex + 1].id;
-      
-    }
-
-});
 //Férmer la lightbox avec le bouton close
 
 lightboxClose.addEventListener("click", () =>{
@@ -69,18 +51,6 @@ lightboxClose.addEventListener("click", () =>{
     });
 
 }
-
-
-
-//  // Ouvrire la lightbox
-// function openLightbox() {
-//     // lighboxBg.classList.add('active') ;
-//     lighboxBg.style.display = 'block';
-//     }
-//     // Férmer la lightbox
-// function closeLightbox() {
-//      lighboxBg.style.display = 'none';
-//         }; 
 
 
 // //******************************EVENTS******************************* */  
