@@ -33,9 +33,22 @@ function createInfoModal(name){
    
 }
 
-textContact.innerHTML = createInfoModal(infos[0].name);  
+textContact.innerHTML = createInfoModal(infos[0].name); 
 
-lightbox();
+const galleryElements = document.querySelectorAll(".gallery_media");
+
+galleryElements.forEach((galleryElement)=>{
+
+    galleryElement.addEventListener("click", ()=>{
+
+           const mediaId = galleryElement.dataset.id;  
+           
+          lightbox(medias, mediaId);
+
+    });
+
+});
+
 likes();
 modal();
 
